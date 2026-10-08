@@ -226,6 +226,127 @@ button { cursor: pointer; border: 0; background: none; }
 .btn-danger:hover { background: #a93342; }
 .btn-sm { padding: 8px 16px; font-size: 14px; }
 
+/* ---------- טופס נושא ועורך ---------- */
+[hidden] { display: none !important; }
+.btn[disabled] { opacity: .6; cursor: not-allowed; }
+.page-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.form-card { padding: 24px; }
+.flabel { display: block; font-weight: 800; font-size: 14.5px; margin: 22px 0 8px; }
+.flabel:first-child { margin-top: 0; }
+.fhint { color: var(--muted); font-size: 13px; font-weight: 500; margin-inline-start: 6px; }
+.input { width: 100%; border: 1.5px solid var(--line); border-radius: var(--r-md); padding: 12px 14px; background: #fff; outline: none; transition: border-color .15s, box-shadow .15s; }
+.input:focus, .tags-input:focus-within, .editor:focus-within { border-color: var(--brand); box-shadow: 0 0 0 4px rgba(15, 110, 124, .10); }
+.cat-pick { display: flex; flex-wrap: wrap; gap: 8px; }
+.pick { padding: 8px 16px; border-radius: 999px; border: 1.5px solid var(--line); background: #fff; font-weight: 700; font-size: 14.5px; color: var(--muted); transition: border-color .15s, background .15s, color .15s; }
+.pick:hover { border-color: #bcd3d7; color: var(--ink); }
+.pick[aria-checked="true"] { background: var(--brand-soft); border-color: var(--brand); color: var(--brand-ink); }
+.tags-input { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; border: 1.5px solid var(--line); border-radius: var(--r-md); padding: 8px 10px; background: #fff; cursor: text; transition: border-color .15s, box-shadow .15s; }
+.tags-input input { flex: 1; min-width: 140px; border: 0; outline: none; padding: 5px 4px; background: none; }
+.tchip { display: inline-flex; align-items: center; gap: 6px; background: var(--brand-soft); color: var(--brand-ink); border-radius: 999px; padding: 3px 6px 3px 12px; font-weight: 700; font-size: 13.5px; }
+.tchip button { width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; font-size: 11px; color: var(--brand-ink); }
+.tchip button:hover { background: rgba(15, 110, 124, .15); }
+.editor { border: 1.5px solid var(--line); border-radius: var(--r-md); background: #fff; overflow: hidden; transition: border-color .15s, box-shadow .15s; }
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 2px; padding: 6px 8px; border-bottom: 1px solid var(--line); background: #fafcfc; }
+.toolbar.dim .tb { opacity: .35; pointer-events: none; }
+.tb { width: 34px; height: 34px; border-radius: 9px; color: var(--muted); display: grid; place-items: center; font-size: 14px; transition: background .15s, color .15s; }
+.tb:hover { background: var(--surface-2); color: var(--ink); }
+.editor .field { border: 0; border-radius: 0; box-shadow: none; min-height: 150px; }
+.seg { display: inline-flex; background: var(--surface-2); border-radius: 999px; padding: 3px; }
+.seg button { padding: 5px 14px; border-radius: 999px; font-weight: 700; font-size: 13px; color: var(--muted); }
+.seg button[aria-selected="true"] { background: #fff; color: var(--ink); box-shadow: var(--shadow-1); }
+.preview { padding: 14px 16px; min-height: 150px; }
+.form-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 26px; }
+
+/* ---------- משתמשים, פרופיל ותגיות ---------- */
+.controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 18px; }
+.search { position: relative; flex: 1; min-width: 200px; }
+.search i { position: absolute; inset-inline-start: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 14px; pointer-events: none; }
+.search input { padding-inline-start: 40px; }
+.grid.users { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.ucell { position: relative; }
+.user-card { display: flex; align-items: center; gap: 14px; padding: 16px; transition: transform .15s, box-shadow .15s, border-color .15s; }
+.user-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); border-color: #cfe1e4; }
+.user-card .info { min-width: 0; flex: 1; }
+.user-card .name { font-weight: 800; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.user-card .sub { color: var(--muted); font-size: 13.5px; }
+.rep { color: #a86a0c; font-weight: 700; }
+.ucell .edit-user { position: absolute; top: 10px; inset-inline-end: 10px; width: 32px; height: 32px; border-radius: 50%; padding: 0; justify-content: center; }
+.profile-head { display: flex; align-items: center; gap: 18px; padding: 24px; margin-bottom: 20px; flex-wrap: wrap; }
+.profile-head h1 { font-size: 24px; font-weight: 800; overflow-wrap: anywhere; }
+.pstats { display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--muted); font-weight: 600; margin-top: 6px; font-size: 14.5px; }
+.tag-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+.tag-card { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 14px 16px; font-weight: 700; transition: transform .15s, box-shadow .15s, border-color .15s; }
+.tag-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); border-color: #cfe1e4; }
+.tag-card span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tag-card .n { background: var(--brand-soft); color: var(--brand-ink); border-radius: 999px; padding: 2px 10px; font-size: 13px; flex-shrink: 0; }
+.alink:hover, a.post-author:hover { color: var(--brand); }
+.more { display: flex; justify-content: center; margin-top: 16px; }
+
+/* ---------- חיפוש ---------- */
+.btn-icon { width: 40px; height: 40px; padding: 0; }
+.overlay.search-ov { place-items: start center; padding-top: max(12px, 8vh); }
+.spanel { background: #fff; border-radius: var(--r-lg); box-shadow: var(--shadow-2); width: 100%; max-width: 660px; max-height: min(80vh, 660px); display: flex; flex-direction: column; overflow: hidden; }
+.shead { display: flex; align-items: center; gap: 12px; padding: 14px 18px; border-bottom: 1px solid var(--line); }
+.shead > i { color: var(--muted); }
+.shead input { flex: 1; min-width: 0; border: 0; outline: none; font-size: 17px; background: none; }
+.kbd { border: 1px solid var(--line); border-radius: 6px; padding: 1px 7px; font-size: 12px; color: var(--muted); font-weight: 700; }
+.sbody { overflow: auto; padding: 8px; }
+.slabel { font-size: 12.5px; font-weight: 800; color: var(--muted); padding: 10px 10px 4px; }
+.sitem { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: var(--r-sm); }
+.sitem.active, .sitem:hover { background: var(--brand-soft); }
+.sicon { width: 36px; height: 36px; border-radius: 10px; background: var(--surface-2); display: grid; place-items: center; color: var(--muted); flex-shrink: 0; font-size: 14px; }
+.sitem .sx { min-width: 0; flex: 1; }
+.sitem .t { font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sitem .s { color: var(--muted); font-size: 13.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+mark { background: #fff0b3; color: inherit; border-radius: 3px; padding: 0 1px; }
+.sempty { padding: 30px 16px; text-align: center; color: var(--muted); }
+.sempty b { display: block; color: var(--ink); margin-bottom: 4px; }
+.schips { display: flex; flex-wrap: wrap; gap: 8px; padding: 6px 10px 12px; }
+
+/* ---------- התראות, הרשמה ואזכורים ---------- */
+#user-area { display: flex; align-items: center; gap: 8px; }
+.bell-wrap { position: relative; }
+.badge-dot { position: absolute; top: -3px; inset-inline-end: -3px; min-width: 19px; height: 19px; border-radius: 10px; background: var(--danger); color: #fff; font-size: 11px; font-weight: 800; display: grid; place-items: center; padding: 0 5px; border: 2px solid #fff; }
+.notif-panel { position: absolute; top: calc(100% + 10px); inset-inline-end: 0; width: 360px; max-height: min(70vh, 520px); overflow: auto; background: #fff; border: 1px solid var(--line); border-radius: var(--r-md); box-shadow: var(--shadow-2); display: none; }
+.notif-panel.open { display: block; }
+.notif-head { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: #fff; z-index: 1; }
+.notif-head b { font-size: 15.5px; }
+.notif-item { display: flex; gap: 10px; align-items: flex-start; width: 100%; text-align: start; padding: 12px 14px; transition: background .12s; }
+.notif-item + .notif-item { border-top: 1px solid var(--line); }
+.notif-item:hover { background: var(--surface-2); }
+.notif-item.unread { background: #f2f9fa; }
+.ndot { width: 8px; height: 8px; border-radius: 50%; background: var(--brand); margin-top: 8px; flex-shrink: 0; }
+.ndot.off { background: transparent; }
+.ntext { font-size: 14.5px; line-height: 1.45; }
+.ntime { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+.notif-empty { padding: 30px 16px; text-align: center; color: var(--muted); }
+.banner { background: #fff8e1; border-bottom: 1px solid #f1e2a8; color: #6b5200; text-align: center; padding: 9px 16px; font-weight: 600; font-size: 14.5px; }
+.banner a { text-decoration: underline; font-weight: 800; }
+.reg-card { max-width: 540px; text-align: start; }
+.reg-card h2, .reg-card > p { text-align: center; }
+.reg-icon { width: 56px; height: 56px; border-radius: 16px; background: var(--brand-soft); color: var(--brand); display: grid; place-items: center; font-size: 24px; margin: 0 auto 14px; }
+.guidelines { background: var(--surface-2); border-radius: var(--r-md); padding: 14px 18px; margin: 18px 0; }
+.guidelines h4 { font-size: 15px; margin-bottom: 8px; }
+.guidelines ul { padding-inline-start: 18px; color: var(--muted); font-size: 14.5px; display: grid; gap: 5px; }
+.check { display: flex; gap: 12px; align-items: flex-start; cursor: pointer; margin: 16px 0 20px; font-size: 14.5px; }
+.check input { appearance: none; -webkit-appearance: none; width: 22px; height: 22px; border: 2px solid #b8c8cc; border-radius: 7px; flex-shrink: 0; display: grid; place-items: center; margin-top: 1px; background: #fff; cursor: pointer; transition: background .15s, border-color .15s; }
+.check input:checked { background: var(--brand); border-color: var(--brand); }
+.check input:checked::after { content: ''; width: 6px; height: 11px; border: solid #fff; border-width: 0 2.5px 2.5px 0; transform: rotate(45deg) translate(-1px, -1px); }
+.lock { display: flex; align-items: center; justify-content: center; gap: 8px; color: var(--muted); background: var(--surface-2); border-radius: 999px; padding: 12px; font-weight: 600; font-size: 14.5px; }
+.editor { position: relative; overflow: visible; }
+.toolbar { border-radius: var(--r-md) var(--r-md) 0 0; }
+.editor .field { border-radius: 0 0 var(--r-md) var(--r-md); }
+.mention-pop { position: absolute; z-index: 30; top: 48px; inset-inline: 8px; background: #fff; border: 1px solid var(--line); border-radius: var(--r-md); box-shadow: var(--shadow-2); max-height: 230px; overflow: auto; padding: 4px; }
+.mention-pop button { display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 10px; border-radius: var(--r-sm); text-align: start; font-weight: 600; }
+.mention-pop button.active, .mention-pop button:hover { background: var(--brand-soft); }
+
+/* ---------- כלי ניהול ---------- */
+.thread-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(46px, 1fr)); gap: 8px; }
+.icon-opt { height: 46px; border-radius: 12px; border: 1.5px solid var(--line); background: #fff; color: var(--muted); font-size: 17px; display: grid; place-items: center; transition: border-color .15s, background .15s, color .15s; }
+.icon-opt:hover { border-color: #bcd3d7; color: var(--ink); }
+.icon-opt[aria-checked="true"] { background: var(--brand-soft); border-color: var(--brand); color: var(--brand-ink); }
+
 /* ---------- ניווט תחתון (מובייל) ---------- */
 .tabbar {
     display: none; position: fixed; inset-inline: 0; bottom: 0; z-index: 60;
@@ -263,6 +384,13 @@ button { cursor: pointer; border: 0; background: none; }
     .thread-head { padding: 18px; }
     .thread-head h1 { font-size: 21px; }
     .post { padding: 16px; }
+    .grid.users { grid-template-columns: 1fr; }
+    .notif-panel { position: fixed; top: calc(var(--bar-h) + 8px); inset-inline: 10px; width: auto; }
+    .kbd { display: none; }
+    .overlay.search-ov { padding: 10px; }
+    .btn-new span { display: none; }
+    .btn-new { width: 40px; height: 40px; padding: 0; }
+    .form-card { padding: 18px; }
 }
 @media (max-width: 420px) { .grid { grid-template-columns: 1fr; } .brand-name { font-size: 17px; } }
 </style>
@@ -277,13 +405,17 @@ button { cursor: pointer; border: 0; background: none; }
         </a>
         <nav class="nav" id="nav-desktop" aria-label="ניווט ראשי"></nav>
         <div class="spacer"></div>
+        <button type="button" class="btn btn-ghost btn-icon" data-act="search-open" title="חיפוש ( / )" aria-label="חיפוש"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <a class="btn btn-primary btn-new" href="" data-link="/new" aria-label="נושא חדש"><i class="fa-solid fa-plus"></i><span>נושא חדש</span></a>
         <div id="user-area"></div>
     </div>
 </header>
 
+<div class="banner" id="reg-banner" hidden>כדי להשלים את ההצטרפות לפורום יש למלא כתובת ולאשר את הכללים. <a href="" data-link="/login">להשלמת ההרשמה</a></div>
 <main class="container" id="app" aria-live="polite"></main>
 <nav class="tabbar" id="nav-mobile" aria-label="ניווט ראשי"></nav>
 <div class="toasts" id="toasts" role="status"></div>
+<input type="file" id="img-input" accept="image/*" multiple hidden>
 
 <script>
 'use strict';
@@ -296,10 +428,13 @@ const CFG = {
     GOOGLE_CLIENT_ID: "426523025549-7c50rkn7cun4vmm2r802u0ij6egjehtg.apps.googleusercontent.com",
     CAT: 'cat_',
     CACHE_KEY: 'forum_data_cache_v1',
-    USER_KEY: 'forum_user'
+    USER_KEY: 'forum_user',
+    DRAFT_KEY: 'forum_topic_draft',
+    CLOUDINARY_URL: 'https://api.cloudinary.com/v1_1/dpsgd6esr/image/upload',
+    CLOUDINARY_PRESET: 'foromny'
 };
 
-const state = { posts: [], user: null, loading: true, loadError: false, lastLoad: 0, renderToken: 0, drafts: {}, quote: null, editing: null, editDraft: '', topicId: null, shownKey: '', pendingScroll: null };
+const state = { posts: [], user: null, loading: true, loadError: false, lastLoad: 0, renderToken: 0, drafts: {}, quote: null, editing: null, editDraft: '', topicId: null, shownKey: '', pendingScroll: null, form: null, submitting: false, uploads: 0, uploadTarget: null, inflight: 0, mutatedAt: 0, usersUI: { q: '', sort: 'count' }, profileMax: 60, profileUid: '', follows: { topics: new Set(), users: new Set() }, notifs: [], notifTimer: null, needsReg: false, returnTo: null, locallyRead: new Set(), locallySeen: new Set(), mention: null };
 
 /* ============ כלי עזר ============ */
 const $ = (s, r = document) => r.querySelector(s);
@@ -336,7 +471,7 @@ async function request(url, opts = {}, timeout = 20000) {
 }
 
 // שליחת פעולה לשרת עם ניסיונות חוזרים. check מאשר שהתשובה באמת מציינת הצלחה
-async function apiPost(body, check = () => true, { retries = 2, delay = 800 } = {}) {
+async function apiPostRaw(body, check = () => true, { retries = 2, delay = 800 } = {}) {
     for (let i = 0; i <= retries; i++) {
         try {
             const res = await request(CFG.API_URL, {
@@ -352,6 +487,12 @@ async function apiPost(body, check = () => true, { retries = 2, delay = 800 } = 
         if (i < retries) await wait(delay);
     }
     return false;
+}
+// עוטף כל כתיבה לשרת, כדי שרענון ברקע לא ידרוס שינוי שעדיין בדרך
+async function apiPost(body, check, opts) {
+    state.inflight++; state.mutatedAt = Date.now();
+    try { return await apiPostRaw(body, check, opts); }
+    finally { state.inflight--; state.mutatedAt = Date.now(); }
 }
 const api = {
     insert: rows => apiPost({ action: 'insert', data: rows }, j => !(j && j.error), { retries: 0 }),
@@ -380,7 +521,8 @@ function saveCache() {
 }
 
 async function loadData() {
-    const cached = safeJSON(localStorage.getItem(CFG.CACHE_KEY), null);
+    const started = Date.now(), isRefresh = state.posts.length > 0;
+    const cached = isRefresh ? null : safeJSON(localStorage.getItem(CFG.CACHE_KEY), null);
     if (Array.isArray(cached) && cached.length) {
         state.posts = cached;
         state.loading = false;
@@ -390,6 +532,7 @@ async function loadData() {
         const res = await request(CFG.API_URL);
         const json = await res.json();
         if (!Array.isArray(json)) throw new Error('bad response');
+        if (isRefresh && (state.inflight > 0 || state.mutatedAt > started)) return;   // יש שינוי בדרך, נרענן בפעם הבאה
         state.posts = mergeServer(json);
         state.loadError = false;
         saveCache();
@@ -437,7 +580,7 @@ const sortedPostIds = () => { const s = new Set(); state.posts.forEach(p => { if
 const postIdFromNumber = n => sortedPostIds()[num(n) - 1] || null;
 
 /* ============ ניתוב ============ */
-const ROUTE_TYPES = ['topic', 'post', 'category', 'user', 'tag', 'tags', 'users', 'latest', 'popular', 'login'];
+const ROUTE_TYPES = ['topic', 'post', 'category', 'user', 'tag', 'tags', 'users', 'latest', 'popular', 'login', 'new', 'edit'];
 const BASE = (() => {
     const parts = location.pathname.split('/').filter(Boolean);
     if (parts.length && /\.html?$/i.test(parts[parts.length - 1])) parts.pop();
@@ -461,6 +604,8 @@ function parseRoute() {
     if (type === 'topic' && /^\d+$/.test(id)) id = topicIdFromNumber(id) || id;
     if (type === 'category' && /^\d+$/.test(id)) id = categoryIdFromNumber(id) || id;
     if (type === 'post' && /^\d+$/.test(id)) id = postIdFromNumber(id) || id;
+    if (type === 'new' && /^\d+$/.test(id)) id = categoryIdFromNumber(id) || id;
+    if (type === 'edit' && /^\d+$/.test(id)) id = topicIdFromNumber(id) || id;
     return { type: ROUTE_TYPES.includes(type) ? type : 'home', id };
 }
 function go(path) {
@@ -473,6 +618,7 @@ document.addEventListener('click', e => {
     if (!a || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
     e.preventDefault();
     closeMenu();
+    if (a.getAttribute('data-link') === '/login' && parseRoute().type !== 'login') state.returnTo = curPath();
     go(a.getAttribute('data-link'));
 });
 
@@ -509,10 +655,6 @@ function topicList(topics) {
 }
 const skeletons = n => Array.from({ length: n }, () => '<div class="skeleton"></div>').join('');
 
-function soon(title) {
-    return `<h1 class="page-title">${esc(title)}</h1><div class="card empty" style="margin-top:20px"><i class="fa-solid fa-hammer"></i><b>המסך הזה ייבנה בשלב הבא</b>הניווט והקישורים כבר עובדים.</div>`;
-}
-
 /* ============ תוכן, תאריכים והרשאות ============ */
 function parseStoredDate(str) {
     const m = String(str || '').match(/(\d{1,2})\.(\d{1,2})\.(\d{4}),?\s*(\d{1,2}):(\d{2}):(\d{2})/);
@@ -521,7 +663,7 @@ function parseStoredDate(str) {
     return new Date(y, mo - 1, d, h, mi, s);
 }
 function timeAgo(str) {
-    const d = parseStoredDate(str);
+    const d = parseStoredDate(str) || (isNaN(Date.parse(str)) ? null : new Date(str));
     if (!d || isNaN(d.getTime())) return String(str || '');
     const sec = Math.floor((Date.now() - d.getTime()) / 1000);
     if (sec < 60) return 'לפני פחות מדקה';
@@ -610,10 +752,11 @@ function headHTML(main, replyCount) {
     return `<div class="card thread-head">
         <h1>${isPinned(main) ? '<i class="fa-solid fa-thumbtack" style="color:var(--brand);font-size:18px;margin-inline-end:8px"></i>' : ''}${esc(main.title)}</h1>
         <div class="row-meta">${cat ? `<span class="chip">${esc(cat.title)}</span>` : ''}
-            <span>${esc(main.author_name || 'אורח')}</span><span>${esc(timeAgo(main.created_at))}</span>
+            ${authorLink(main, 'alink')}<span>${esc(timeAgo(main.created_at))}</span>
             <span><i class="fa-regular fa-eye"></i> ${num(main.views)}</span><span><i class="fa-regular fa-comment"></i> ${replyCount}</span>
-            ${isDeleted(main) ? '<span class="badge warn">נמחק</span>' : ''}</div>
-        ${tags.length ? `<div class="tags">${tags.map(g => `<a class="tag" href="${hrefOf('/tag/' + encodeURIComponent(g))}" data-link="/tag/${encodeURIComponent(g)}">${esc(g)}</a>`).join('')}</div>` : ''}</div>`;
+            ${allowedList(main).length ? '<span class="badge"><i class="fa-solid fa-user-lock"></i> כתיבה מוגבלת</span>' : ''}${isDeleted(main) ? '<span class="badge warn">נמחק</span>' : ''}</div>
+        ${tags.length ? `<div class="tags">${tags.map(g => `<a class="tag" href="${hrefOf('/tag/' + encodeURIComponent(g))}" data-link="/tag/${encodeURIComponent(g)}">${esc(g)}</a>`).join('')}</div>` : ''}
+        ${threadActions(main)}</div>`;
 }
 
 function postHTML(p, isMain) {
@@ -622,7 +765,7 @@ function postHTML(p, isMain) {
     const vote = votes.get(p.id);
     const q = p.quote_content ? `<div class="quote" role="button" tabindex="0" data-act="goto" data-id="${esc(p.quote_id)}"><b>${esc(p.quote_author || '')} כתב/ה:</b>${esc(p.quote_content)}</div>` : '';
     const body = state.editing === p.id
-        ? `<textarea id="edit-field" class="field" aria-label="עריכת הודעה">\n${esc(state.editDraft)}</textarea>
+        ? `${editorHTML('edit-field', state.editDraft, '')}
            <div class="post-actions"><button type="button" class="btn btn-primary btn-sm" data-act="edit-save" data-id="${id}">שמירה</button><button type="button" class="btn btn-ghost btn-sm" data-act="edit-cancel">ביטול</button></div>`
         : `${q}<div class="post-body" id="body-${id}">${renderContent(p.content)}</div>`;
     const actions = state.editing === p.id ? '' : `<div class="post-actions">
@@ -630,25 +773,29 @@ function postHTML(p, isMain) {
         <button type="button" class="act ${vote === 'dislike' ? 'on-dislike' : ''}" data-act="vote" data-type="dislike" data-id="${id}" aria-pressed="${vote === 'dislike'}" aria-label="לא אהבתי"><i class="fa-${vote === 'dislike' ? 'solid' : 'regular'} fa-thumbs-down"></i>${num(p.dislikes)}</button>
         ${state.user && !deleted ? `<button type="button" class="act" data-act="quote" data-id="${id}"><i class="fa-solid fa-quote-right"></i>ציטוט</button>` : ''}
         <span class="grow"></span>
-        ${mine && !deleted ? `<button type="button" class="act" data-act="edit" data-id="${id}"><i class="fa-regular fa-pen-to-square"></i>עריכה</button>` : ''}
+        ${mine && !deleted ? (isMain
+            ? `<a class="act" href="${hrefOf('/edit/' + (topicNumber(p.topic_id) || encodeURIComponent(p.topic_id)))}" data-link="/edit/${topicNumber(p.topic_id) || encodeURIComponent(p.topic_id)}"><i class="fa-regular fa-pen-to-square"></i>עריכה</a>`
+            : `<button type="button" class="act" data-act="edit" data-id="${id}"><i class="fa-regular fa-pen-to-square"></i>עריכה</button>`) : ''}
         ${mine && !deleted ? `<button type="button" class="act danger" data-act="delete" data-id="${id}"><i class="fa-regular fa-trash-can"></i>מחיקה</button>` : ''}
-        ${mine && deleted ? `<button type="button" class="act" data-act="restore" data-id="${id}"><i class="fa-solid fa-rotate-left"></i>שחזור</button>` : ''}</div>`;
+        ${mine && deleted ? `<button type="button" class="act" data-act="restore" data-id="${id}"><i class="fa-solid fa-rotate-left"></i>שחזור</button>` : ''}
+        ${mine && deleted && isMain ? `<button type="button" class="act danger" data-act="purge" data-id="${esc(p.topic_id)}"><i class="fa-regular fa-trash-can"></i>מחיקה לצמיתות</button>` : ''}</div>`;
     return `<article class="card post ${deleted ? 'is-deleted' : ''}" id="p-${id}">
         <div class="post-head">${avatar(p.author_name, p.author_avatar, 42)}
-            <div><span class="post-author">${esc(p.author_name || 'אורח')}</span>${isMain ? '<span class="badge">כותב הנושא</span>' : ''}${deleted ? '<span class="badge warn">נמחקה</span>' : ''}
+            <div>${authorLink(p)}${isMain ? '<span class="badge">כותב הנושא</span>' : ''}${deleted ? '<span class="badge warn">נמחקה</span>' : ''}
             <div class="post-time" title="${esc(p.created_at)}">${esc(timeAgo(p.created_at))}</div></div>
             ${p._status === 'pending' ? '<span class="sending">שולח...</span>' : ''}</div>
         ${body}${actions}</article>`;
 }
 
 function composerHTML(main) {
-    if (!main || isDeleted(main)) return '';
+    if (!main) return '';
+    if (isDeleted(main)) return '<div class="card notice">לא ניתן להגיב לנושא שנמחק.</div>';
     if (!state.user) return `<div class="card notice">כדי להגיב צריך <a href="${hrefOf('/login')}" data-link="/login" style="color:var(--brand);font-weight:700">להתחבר</a>.</div>`;
     if (!canReply(main)) return '<div class="card notice">אין לך הרשאה להגיב בנושא זה.</div>';
     const q = state.quote;
     return `<div class="card composer"><h3>הוספת תגובה</h3>
         ${q ? `<div class="quote-pill"><div><b>מצטטים את ${esc(q.author)}</b>${esc(q.snippet)}</div><button type="button" class="act" data-act="cancel-quote" aria-label="ביטול ציטוט"><i class="fa-solid fa-xmark"></i></button></div>` : ''}
-        <textarea id="reply-input" class="field" placeholder="כתבו תגובה..." aria-label="תגובה">\n${esc(state.drafts[main.topic_id] || '')}</textarea>
+        ${editorHTML('reply-input', state.drafts[main.topic_id] || '', 'כתבו תגובה...')}
         <div class="composer-foot"><span>Ctrl+Enter לשליחה. עיצוב: **מודגש**, *נטוי*, - רשימה</span><button type="button" class="btn btn-primary" data-act="send">שליחה</button></div></div>`;
 }
 
@@ -751,6 +898,7 @@ async function sendReply() {
         post._status = null;
         saveCache();
         if (state.topicId === topicId) paintPosts();
+        afterReply(post, main);
     } else {
         state.posts = state.posts.filter(x => x !== post);
         state.drafts[topicId] = content; state.quote = q;
@@ -827,22 +975,770 @@ document.addEventListener('keydown', e => {
     if (e.key === 'Enter' && e.target.matches && e.target.matches('.quote[data-act]')) e.target.click();
 });
 
+/* ============ עורך, העלאת תמונות וטופס נושא ============ */
+let uploadSeq = 0;
+function editorHTML(id, value, placeholder, withPreview = false) {
+    const btn = (k, icon, title) => `<button type="button" class="tb" data-act="fmt" data-fmt="${k}" data-target="${id}" title="${title}" aria-label="${title}"><i class="fa-solid ${icon}"></i></button>`;
+    return `<div class="editor">
+        <div class="toolbar">${btn('bold', 'fa-bold', 'מודגש')}${btn('italic', 'fa-italic', 'נטוי')}${btn('strike', 'fa-strikethrough', 'קו חוצה')}${btn('h', 'fa-heading', 'כותרת')}${btn('ul', 'fa-list-ul', 'רשימה')}${btn('quote', 'fa-quote-right', 'ציטוט')}${btn('code', 'fa-code', 'קוד')}${btn('link', 'fa-link', 'קישור')}${btn('image', 'fa-image', 'הוספת תמונה')}
+            ${withPreview ? '<span class="grow"></span><div class="seg" role="tablist"><button type="button" role="tab" aria-selected="true" data-act="tab" data-tab="write">כתיבה</button><button type="button" role="tab" aria-selected="false" data-act="tab" data-tab="preview">תצוגה מקדימה</button></div>' : ''}</div>
+        <textarea id="${id}" class="field" data-editor-field placeholder="${esc(placeholder)}" aria-label="${esc(placeholder || 'תוכן')}">\n${esc(value)}</textarea>
+        ${withPreview ? '<div class="preview post-body" hidden></div>' : ''}</div>`;
+}
+
+function fmt(id, kind) {
+    if (kind === 'image') { state.uploadTarget = id; $('#img-input').click(); return; }
+    const ta = document.getElementById(id);
+    if (!ta) return;
+    ta.focus();
+    const v = ta.value, s = ta.selectionStart, e = ta.selectionEnd, sel = v.slice(s, e);
+    const wrap = (l, r, ph) => { const txt = sel || ph; ta.setRangeText(l + txt + r, s, e, 'end'); ta.setSelectionRange(s + l.length, s + l.length + txt.length); };
+    const prefix = pre => {
+        const ls = s === 0 ? 0 : v.lastIndexOf('\n', s - 1) + 1;
+        ta.setRangeText(v.slice(ls, e).split('\n').map(l => pre + l).join('\n'), ls, e, 'end');
+    };
+    switch (kind) {
+        case 'bold': wrap('**', '**', 'טקסט מודגש'); break;
+        case 'italic': wrap('*', '*', 'טקסט נטוי'); break;
+        case 'strike': wrap('~~', '~~', 'טקסט'); break;
+        case 'code': wrap('`', '`', 'קוד'); break;
+        case 'h': prefix('## '); break;
+        case 'ul': prefix('- '); break;
+        case 'quote': prefix('> '); break;
+        case 'link': { const txt = sel || 'טקסט הקישור'; ta.setRangeText(`[${txt}](https://)`, s, e, 'end'); const us = s + txt.length + 3; ta.setSelectionRange(us, us + 8); break; }
+    }
+    ta.dispatchEvent(new Event('input', { bubbles: true }));
+}
+
+async function uploadImage(file, id) {
+    const ta = document.getElementById(id);
+    if (!ta) return;
+    if (!file.type.startsWith('image/')) { toast('ניתן להעלות קבצי תמונה בלבד', 'error'); return; }
+    if (file.size > 8 * 1024 * 1024) { toast('התמונה גדולה מדי (מקסימום 8MB)', 'error'); return; }
+    // סימון זמני במקום התמונה, שמוחלף בכתובת האמיתית בסיום ההעלאה
+    const token = `![מעלה תמונה ${++uploadSeq}...]()`;
+    const at = ta.selectionStart;
+    ta.setRangeText((at > 0 && ta.value[at - 1] !== '\n' ? '\n' : '') + token + '\n', at, ta.selectionEnd, 'end');
+    ta.dispatchEvent(new Event('input', { bubbles: true }));
+    state.uploads++;
+    toast('מעלה תמונה...');
+    let md = '';
+    try {
+        const fd = new FormData();
+        fd.append('file', file);
+        fd.append('upload_preset', CFG.CLOUDINARY_PRESET);
+        const res = await request(CFG.CLOUDINARY_URL, { method: 'POST', body: fd }, 90000);
+        const data = await res.json();
+        if (!res.ok || !data.secure_url) throw new Error('upload');
+        md = `![תמונה](${data.secure_url})`;
+        toast('התמונה הועלתה', 'success');
+    } catch (e) { toast('שגיאה בהעלאת התמונה', 'error'); }
+    state.uploads--;
+    const live = document.getElementById(id);   // ייתכן שהעורך נבנה מחדש בינתיים
+    if (live) {
+        const i = live.value.indexOf(token);
+        if (i >= 0) { live.setRangeText(md, i, i + token.length, 'preserve'); live.dispatchEvent(new Event('input', { bubbles: true })); }
+    }
+}
+
+const parseTags = s => String(s || '').split(/[,،]/).map(x => x.trim()).filter(Boolean);
+const notice = (title, text = '') => `<div class="card empty"><i class="fa-regular fa-circle-question"></i><b>${esc(title)}</b>${esc(text)}<br><a class="btn btn-primary" style="margin-top:16px" href="${hrefOf('/')}" data-link="/">חזרה לדף הבית</a></div>`;
+
+let draftTimer;
+function queueDraft() {
+    const f = state.form;
+    if (!f || f.mode !== 'new') return;
+    clearTimeout(draftTimer);
+    draftTimer = setTimeout(() => {
+        try {
+            if (!f.title && !f.content && !f.tags.length) localStorage.removeItem(CFG.DRAFT_KEY);
+            else localStorage.setItem(CFG.DRAFT_KEY, JSON.stringify({ title: f.title, category: f.category, tags: f.tags, content: f.content }));
+        } catch (e) {}
+    }, 400);
+}
+function formDirty() {
+    const f = state.form;
+    if (!f || f.mode !== 'edit') return false;
+    return f.title !== f.orig.title || f.content !== f.orig.content || f.category !== f.orig.category || f.tags.join(',') !== f.orig.tags;
+}
+
+function paintTags() {
+    const el = $('#tag-chips'), f = state.form;
+    if (el && f) el.innerHTML = f.tags.map((g, i) => `<span class="tchip">${esc(g)}<button type="button" data-act="tag-del" data-i="${i}" aria-label="הסרת התגית ${esc(g)}"><i class="fa-solid fa-xmark"></i></button></span>`).join('');
+}
+function addTags(raw) {
+    const f = state.form;
+    if (!f) return;
+    parseTags(raw).forEach(g => {
+        g = g.slice(0, 24);
+        if (f.tags.length < 8 && !f.tags.some(x => x.toLowerCase() === g.toLowerCase())) f.tags.push(g);
+    });
+    paintTags(); queueDraft();
+}
+function paintPick() {
+    const el = $('#cat-pick'), f = state.form;
+    if (el && f) el.innerHTML = getCategories().map(c => `<button type="button" class="pick" role="radio" aria-checked="${c.topic_id === f.category}" data-act="pick-cat" data-id="${esc(c.topic_id)}">${esc(c.title)}</button>`).join('');
+}
+
+function formView({ type, id }) {
+    const edit = type === 'edit';
+    if (!state.user) {
+        return `<div class="card login-card"><h2>${edit ? 'עריכת נושא' : 'פתיחת נושא חדש'}</h2><p>${edit ? 'כדי לערוך נושא' : 'כדי לפתוח נושא'} צריך להתחבר ולהשלים הרשמה קצרה.</p>${loginLink()}</div>`;
+    }
+    const cats = getCategories();
+    if (!cats.length) return notice('אין עדיין קטגוריות', 'אפשר לפתוח נושא רק אחרי שנוצרה קטגוריה אחת לפחות.');
+    let main = null;
+    if (edit) {
+        main = threadData(id).main;
+        if (!main || !canManage(main) || (isDeleted(main) && !state.user.isAdmin)) return notice('אי אפשר לערוך את הנושא הזה', 'הנושא לא נמצא או שאין לך הרשאה לערוך אותו.');
+        const tags = parseTags(main.tags);
+        state.form = { mode: 'edit', topicId: id, mainId: main.id, title: main.title || '', category: main.category, tags, content: main.content || '',
+            orig: { title: main.title || '', content: main.content || '', category: main.category, tags: tags.join(',') } };
+    } else {
+        const d = safeJSON(localStorage.getItem(CFG.DRAFT_KEY), null) || {};
+        const valid = c => cats.some(x => x.topic_id === c);
+        state.form = { mode: 'new', title: d.title || '', category: valid(id) ? id : (valid(d.category) ? d.category : cats[0].topic_id),
+            tags: Array.isArray(d.tags) ? d.tags.slice(0, 8) : [], content: d.content || '' };
+    }
+    const f = state.form;
+    setTimeout(() => { paintTags(); paintPick(); const el = $('#form-title'); if (el && !edit) el.focus({ preventScroll: true }); }, 0);
+    return `<nav class="crumbs" aria-label="מיקום"><a href="${hrefOf('/')}" data-link="/">דף הבית</a><i class="fa-solid fa-chevron-left"></i><span>${edit ? 'עריכת נושא' : 'נושא חדש'}</span></nav>
+        <h1 class="page-title" style="margin-bottom:18px">${edit ? 'עריכת נושא' : 'פתיחת נושא חדש'}</h1>
+        <div class="card form-card" id="topic-form">
+            <label class="flabel" for="form-title">כותרת</label>
+            <input id="form-title" class="input" maxlength="150" placeholder="כותרת קצרה וברורה" value="${esc(f.title)}">
+            <span class="flabel">קטגוריה</span>
+            <div class="cat-pick" id="cat-pick" role="radiogroup" aria-label="קטגוריה"></div>
+            <label class="flabel" for="tag-input">תגיות<span class="fhint">לא חובה, עד 8. מקישים Enter או פסיק אחרי כל תגית</span></label>
+            <div class="tags-input" id="tags-box"><span id="tag-chips" style="display:contents"></span><input id="tag-input" placeholder="הוספת תגית" maxlength="24"></div>
+            <span class="flabel">תוכן</span>
+            ${editorHTML('form-content', f.content, 'פרטו את נושא הדיון...', true)}
+            <div class="form-actions"><button type="button" class="btn btn-ghost" data-act="form-cancel">ביטול</button>
+                <button type="button" class="btn btn-primary" id="form-submit" data-act="form-submit">${edit ? 'שמירת שינויים' : 'פרסום הנושא'}</button></div>
+        </div>`;
+}
+
+function setSubmitBusy(busy) {
+    const b = $('#form-submit'), f = state.form;
+    if (!b || !f) return;
+    b.disabled = busy;
+    b.textContent = busy ? 'שומר...' : (f.mode === 'edit' ? 'שמירת שינויים' : 'פרסום הנושא');
+}
+
+async function submitTopic() {
+    const f = state.form;
+    if (!f || state.submitting || !state.user) return;
+    const title = f.title.trim(), content = f.content.trim(), tags = f.tags.join(', ');
+    if (!title) { toast('יש להזין כותרת', 'error'); $('#form-title').focus(); return; }
+    if (!f.category) { toast('יש לבחור קטגוריה', 'error'); return; }
+    if (!content) { toast('יש להזין תוכן', 'error'); $('#form-content').focus(); return; }
+    if (state.uploads > 0) { toast('ממתינים לסיום העלאת התמונה'); return; }
+    state.submitting = true;
+    setSubmitBusy(true);
+    try {
+        if (f.mode === 'edit') {
+            const ok = await api.update('id', f.mainId, { title, category: f.category, tags, content });
+            if (!ok) throw new Error('update');
+            const main = state.posts.find(p => p.id === f.mainId);
+            if (main) Object.assign(main, { title, category: f.category, tags, content });
+            saveCache();
+            state.form = null;
+            toast('הנושא עודכן', 'success');
+            go('/topic/' + (topicNumber(f.topicId) || encodeURIComponent(f.topicId)));
+        } else {
+            const now = Date.now();
+            const post = {
+                id: 'post_' + now, topic_id: 'topic_' + now, title, category: f.category, tags,
+                author_name: state.user.name, author_email: state.user.email, author_avatar: state.user.picture,
+                content, created_at: new Date().toLocaleString('he-IL'), views: 0, likes: 0, dislikes: 0
+            };
+            const ok = await api.insert([post]);
+            if (!ok) throw new Error('insert');
+            state.posts.push(post);
+            saveCache();
+            afterNewTopic(post);
+            try { localStorage.removeItem(CFG.DRAFT_KEY); } catch (e) {}
+            state.form = null;
+            toast('הנושא פורסם', 'success');
+            go('/topic/' + (topicNumber(post.topic_id) || encodeURIComponent(post.topic_id)));
+        }
+    } catch (e) {
+        toast('השמירה נכשלה. מה שכתבתם נשמר, אפשר לנסות שוב', 'error');
+    }
+    state.submitting = false;
+    setSubmitBusy(false);
+}
+
+/* ---------- אירועי העורך והטופס ---------- */
+document.addEventListener('mousedown', e => { if (e.target.closest('.tb')) e.preventDefault(); });   // שומר על הסמן והטקסט המסומן
+document.addEventListener('click', e => {
+    const b = e.target.closest('[data-act]');
+    if (!b) return;
+    switch (b.dataset.act) {
+        case 'fmt': fmt(b.dataset.target, b.dataset.fmt); break;
+        case 'tab': {
+            const ed = b.closest('.editor'), ta = ed.querySelector('textarea'), pv = ed.querySelector('.preview');
+            const showPreview = b.dataset.tab === 'preview';
+            ed.querySelectorAll('.seg button').forEach(x => x.setAttribute('aria-selected', String(x === b)));
+            ed.querySelector('.toolbar').classList.toggle('dim', showPreview);
+            ta.hidden = showPreview; pv.hidden = !showPreview;
+            if (showPreview) pv.innerHTML = ta.value.trim() ? renderContent(ta.value) : '<span style="color:var(--muted)">אין עדיין מה להציג</span>';
+            else ta.focus();
+            break;
+        }
+        case 'pick-cat': if (state.form) { state.form.category = b.dataset.id; paintPick(); queueDraft(); } break;
+        case 'tag-del': if (state.form) { state.form.tags.splice(num(b.dataset.i), 1); paintTags(); queueDraft(); } break;
+        case 'form-submit': submitTopic(); break;
+        case 'form-cancel': { const f = state.form; state.form = null; go(f && f.mode === 'edit' ? '/topic/' + (topicNumber(f.topicId) || encodeURIComponent(f.topicId)) : '/'); break; }
+    }
+});
+document.addEventListener('click', e => { if (e.target.id === 'tags-box') $('#tag-input').focus(); });
+document.addEventListener('input', e => {
+    const f = state.form, id = e.target.id;
+    if (id === 'form-title' && f) { f.title = e.target.value; queueDraft(); }
+    if (id === 'form-content' && f) { f.content = e.target.value; queueDraft(); }
+    if (id === 'tag-input' && /[,،]/.test(e.target.value)) { addTags(e.target.value); e.target.value = ''; }
+});
+document.addEventListener('focusout', e => { if (e.target.id === 'tag-input' && e.target.value.trim()) { addTags(e.target.value); e.target.value = ''; } });
+document.addEventListener('keydown', e => {
+    if (e.target.id === 'tag-input') {
+        if (e.key === 'Enter') { e.preventDefault(); if (e.target.value.trim()) { addTags(e.target.value); e.target.value = ''; } }
+        else if (e.key === 'Backspace' && !e.target.value && state.form && state.form.tags.length) { state.form.tags.pop(); paintTags(); queueDraft(); }
+    }
+    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter' && e.target.id === 'form-content') { e.preventDefault(); submitTopic(); }
+});
+$('#img-input').addEventListener('change', e => {
+    const id = state.uploadTarget;
+    Array.from(e.target.files || []).forEach(f => uploadImage(f, id));
+    e.target.value = '';
+});
+document.addEventListener('paste', e => {
+    const ta = e.target;
+    if (!ta.matches || !ta.matches('textarea[data-editor-field]')) return;
+    const item = Array.from((e.clipboardData || {}).items || []).find(i => i.type.startsWith('image/'));
+    if (item) { e.preventDefault(); const f = item.getAsFile(); if (f) uploadImage(f, ta.id); }
+});
+document.addEventListener('dragover', e => { if (e.target.matches && e.target.matches('textarea[data-editor-field]')) e.preventDefault(); });
+document.addEventListener('drop', e => {
+    const ta = e.target;
+    if (!ta.matches || !ta.matches('textarea[data-editor-field]')) return;
+    const files = Array.from((e.dataTransfer || {}).files || []).filter(f => f.type.startsWith('image/'));
+    if (files.length) { e.preventDefault(); files.forEach(f => uploadImage(f, ta.id)); }
+});
+window.addEventListener('beforeunload', e => { if (formDirty() || state.uploads > 0) { e.preventDefault(); e.returnValue = ''; } });
+
+/* ============ משתמשים, פרופיל ותגיות ============ */
+// זהה לפורום הקיים, כדי שקישורי פרופיל ותיוגים ישנים ימשיכו לעבוד
+function userIdFromEmail(email) {
+    if (!email) return 'unknown';
+    let h = 5381;
+    for (let i = 0; i < email.length; i++) { h = ((h << 5) + h) + email.charCodeAt(i); h = h & 0xffffffff; }
+    return 'u' + Math.abs(h).toString(36);
+}
+const countLabel = (n, one, many) => n === 1 ? one : `${n} ${many}`;
+const userPath = email => '/user/' + userIdFromEmail(email);
+function authorLink(p, cls = 'post-author') {
+    const name = esc(p.author_name || 'אורח');
+    return p.author_email ? `<a class="${cls}" href="${hrefOf(userPath(p.author_email))}" data-link="${userPath(p.author_email)}">${name}</a>` : `<span class="${cls}">${name}</span>`;
+}
+
+function getUsers() {
+    const map = new Map();
+    state.posts.forEach(p => {
+        if (!p.author_email || isCatId(p.topic_id)) return;
+        let u = map.get(p.author_email);
+        if (!u) { u = { uid: userIdFromEmail(p.author_email), email: p.author_email, name: '', avatar: '', count: 0, topics: 0, rep: 0 }; map.set(p.author_email, u); }
+        u.name = p.author_name || u.name;          // הפרטים העדכניים ביותר
+        u.avatar = p.author_avatar || u.avatar;
+        if (!isDeleted(p)) { u.count++; if (p.title) u.topics++; u.rep += num(p.likes); }
+    });
+    return [...map.values()];
+}
+
+function loginPrompt(title, text) {
+    return `<div class="card login-card"><h2>${esc(title)}</h2><p>${esc(text)}</p>${loginLink()}</div>`;
+}
+
+function formDialog(title, fields, okLabel = 'שמירה', validate = () => '') {
+    return new Promise(resolve => {
+        const prev = document.activeElement;
+        const ov = document.createElement('div');
+        ov.className = 'overlay';
+        ov.innerHTML = `<div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dlg-t" style="max-width:440px"><h3 id="dlg-t">${esc(title)}</h3>
+            ${fields.map(f => `<label class="flabel" for="dlg-${f.id}" style="margin-top:14px">${esc(f.label)}</label><input id="dlg-${f.id}" class="input" value="${esc(f.value || '')}" placeholder="${esc(f.placeholder || '')}" autocomplete="off">`).join('')}
+            <div class="dialog-actions"><button type="button" class="btn btn-ghost btn-sm" data-r="0">ביטול</button><button type="button" class="btn btn-primary btn-sm" data-r="1">${esc(okLabel)}</button></div></div>`;
+        const close = v => { document.removeEventListener('keydown', onKey, true); ov.remove(); if (prev && prev.focus) prev.focus(); resolve(v); };
+        const submit = () => {
+            const vals = {};
+            fields.forEach(f => { vals[f.id] = ov.querySelector('#dlg-' + f.id).value.trim(); });
+            const err = validate(vals);
+            if (err) { toast(err, 'error'); return; }
+            close(vals);
+        };
+        const onKey = e => {
+            if (e.key === 'Escape') { e.preventDefault(); close(null); }
+            else if (e.key === 'Enter' && e.target.tagName === 'INPUT') { e.preventDefault(); submit(); }
+        };
+        ov.addEventListener('click', e => {
+            const b = e.target.closest('[data-r]');
+            if (b) { if (b.dataset.r === '1') submit(); else close(null); } else if (e.target === ov) close(null);
+        });
+        document.addEventListener('keydown', onKey, true);
+        document.body.appendChild(ov);
+        ov.querySelector('input').focus();
+    });
+}
+
+/* ---------- רשימת משתמשים ---------- */
+function usersListHTML() {
+    const ui = state.usersUI, q = ui.q.trim().toLowerCase();
+    let users = getUsers().filter(u => !q || (u.name || '').toLowerCase().includes(q));
+    if (ui.sort === 'name') users.sort((a, b) => (a.name || '').localeCompare(b.name || '', 'he'));
+    else if (ui.sort === 'rep') users.sort((a, b) => b.rep - a.rep || b.count - a.count);
+    else users.sort((a, b) => b.count - a.count || b.rep - a.rep);
+    if (!users.length) return '<div class="card empty"><i class="fa-regular fa-user"></i><b>לא נמצאו משתמשים</b></div>';
+    const admin = state.user && state.user.isAdmin;
+    return `<div class="grid users">${users.map(u => `<div class="ucell">
+        <a class="card user-card" href="${hrefOf('/user/' + u.uid)}" data-link="/user/${u.uid}">${avatar(u.name, u.avatar, 52)}
+            <div class="info"><div class="name">${esc(u.name || 'אורח')}</div><div class="sub">${countLabel(u.count, 'הודעה אחת', 'הודעות')}</div><div class="sub rep"><i class="fa-solid fa-star"></i> ${u.rep} מוניטין</div></div></a>
+        ${admin ? `<button type="button" class="btn btn-ghost edit-user" data-act="user-edit" data-uid="${u.uid}" title="עריכת משתמש" aria-label="עריכת ${esc(u.name)}"><i class="fa-solid fa-pen"></i></button>` : ''}</div>`).join('')}</div>`;
+}
+function paintUsers() { const el = $('#users-list'); if (el) el.innerHTML = usersListHTML(); }
+
+function usersView() {
+    if (!state.user) return loginPrompt('רשימת המשתמשים', 'כדי לראות את חברי הקהילה צריך להתחבר עם חשבון גוגל.');
+    const ui = state.usersUI;
+    return `<h1 class="page-title">משתמשים</h1><p class="page-sub">חברי הקהילה והפעילות שלהם</p>
+        <div class="controls"><div class="search"><i class="fa-solid fa-magnifying-glass"></i><input id="users-q" class="input" placeholder="חיפוש לפי שם" value="${esc(ui.q)}" autocomplete="off" aria-label="חיפוש משתמשים"></div>
+        <div class="seg" role="tablist" aria-label="מיון">${[['count', 'פעילות'], ['rep', 'מוניטין'], ['name', 'שם']].map(([k, l]) => `<button type="button" role="tab" aria-selected="${ui.sort === k}" data-act="users-sort" data-sort="${k}">${l}</button>`).join('')}</div></div>
+        <div id="users-list">${usersListHTML()}</div>`;
+}
+
+/* ---------- פרופיל ---------- */
+function profileView({ id }) {
+    const u = getUsers().find(x => x.uid === id);
+    if (!u) return notice('המשתמש לא נמצא', 'ייתכן שהקישור שגוי.');
+    if (state.profileUid !== id) { state.profileUid = id; state.profileMax = 60; }
+    const mains = new Map();
+    state.posts.forEach(p => { if (p.title && !isCatId(p.topic_id) && !mains.has(p.topic_id)) mains.set(p.topic_id, p); });
+    const nums = new Map(sortedPostIds().map((pid, i) => [pid, i + 1]));
+    const stamp = p => num(String(p.id).replace(/\D/g, ''));
+    const posts = state.posts
+        .filter(p => p.author_email === u.email && !isCatId(p.topic_id) && (!isDeleted(p) || canManage(p)))
+        .filter(p => { const m = mains.get(p.topic_id); return m && (!isDeleted(m) || canManage(m)); })
+        .sort((a, b) => stamp(b) - stamp(a));
+    const shown = posts.slice(0, state.profileMax);
+    const rows = shown.map(p => {
+        const m = mains.get(p.topic_id), path = '/post/' + (nums.get(p.id) || encodeURIComponent(p.id));
+        return `<a class="row" href="${hrefOf(path)}" data-link="${path}"><div class="row-main"><div class="row-title">${esc(m.title)}</div>
+            <div class="row-meta"><span class="chip">${esc(catName(m.category))}</span><span>${p.title ? 'פתח/ה את הנושא' : 'הגיב/ה בנושא'}</span><span>${esc(timeAgo(p.created_at))}</span></div></div></a>`;
+    }).join('');
+    const isAdminUser = u.email === CFG.ADMIN_EMAIL;
+    return `<nav class="crumbs" aria-label="מיקום"><a href="${hrefOf('/users')}" data-link="/users">משתמשים</a><i class="fa-solid fa-chevron-left"></i><span>${esc(u.name || 'אורח')}</span></nav>
+        <div class="card profile-head">${avatar(u.name, u.avatar, 76)}
+            <div style="flex:1;min-width:0"><h1>${esc(u.name || 'אורח')}${isAdminUser ? '<span class="badge">מנהל</span>' : ''}</h1>
+                <div class="pstats"><span><i class="fa-regular fa-comment-dots"></i> ${countLabel(u.count, 'הודעה אחת', 'הודעות')}</span><span><i class="fa-solid fa-list"></i> ${countLabel(u.topics, 'נושא אחד', 'נושאים')}</span><span class="rep"><i class="fa-solid fa-star"></i> ${u.rep} מוניטין</span></div></div>
+            ${followUserBtn(u)}${state.user && state.user.isAdmin ? `<button type="button" class="btn btn-ghost btn-sm" data-act="user-edit" data-uid="${u.uid}"><i class="fa-solid fa-pen"></i>עריכת משתמש</button>` : ''}</div>
+        <div class="section-title" style="margin-top:0">פעילות אחרונה</div>
+        ${posts.length ? `<div class="card list">${rows}</div>` : '<div class="card empty"><i class="fa-regular fa-comments"></i><b>אין עדיין פעילות</b>למשתמש הזה אין הודעות בפורום.</div>'}
+        ${posts.length > shown.length ? `<div class="more"><button type="button" class="btn btn-ghost" data-act="profile-more">הצגת עוד (${posts.length - shown.length})</button></div>` : ''}`;
+}
+
+async function editUser(uid) {
+    if (!state.user || !state.user.isAdmin) return;
+    const u = getUsers().find(x => x.uid === uid);
+    if (!u) return;
+    const r = await formDialog('עריכת משתמש', [
+        { id: 'name', label: 'שם תצוגה', value: u.name },
+        { id: 'avatar', label: 'כתובת תמונה (לא חובה)', value: u.avatar, placeholder: 'https://' }
+    ], 'שמירה', v => !v.name ? 'יש להזין שם תצוגה' : (v.avatar && !/^https?:\/\//i.test(v.avatar) ? 'כתובת התמונה חייבת להתחיל ב-https://' : ''));
+    if (!r) return;
+    const ok = await api.update('author_email', u.email, { author_name: r.name, author_avatar: r.avatar });
+    if (!ok) { toast('העדכון נכשל, נסו שוב', 'error'); return; }
+    state.posts.forEach(p => { if (p.author_email === u.email) { p.author_name = r.name; p.author_avatar = r.avatar; } });
+    if (state.user && state.user.email === u.email) {
+        state.user.name = r.name; state.user.picture = r.avatar;
+        try { localStorage.setItem(CFG.USER_KEY, JSON.stringify(state.user)); } catch (e) {}
+    }
+    saveCache();
+    toast('פרטי המשתמש עודכנו', 'success');
+    render({ soft: true });
+}
+
+/* ---------- תגיות ---------- */
+function getTagStats() {
+    const map = new Map();
+    getTopics().forEach(m => parseTags(m.tags).forEach(g => {
+        const k = g.toLowerCase();
+        const e = map.get(k) || { tag: g, count: 0 };
+        e.count++; map.set(k, e);
+    }));
+    return [...map.values()].sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag, 'he'));
+}
+function tagsView() {
+    const tags = getTagStats();
+    return `<h1 class="page-title">תגיות</h1><p class="page-sub">נושאים לפי תחום עניין</p>` + (tags.length
+        ? `<div class="tag-grid">${tags.map(x => `<a class="card tag-card" href="${hrefOf('/tag/' + encodeURIComponent(x.tag))}" data-link="/tag/${encodeURIComponent(x.tag)}"><span>${esc(x.tag)}</span><span class="n">${x.count}</span></a>`).join('')}</div>`
+        : '<div class="card empty"><i class="fa-solid fa-tag"></i><b>אין עדיין תגיות</b>תגיות מתווספות כשפותחים נושא.</div>');
+}
+function tagView({ id }) {
+    const k = String(id || '').toLowerCase();
+    const topics = getTopics().filter(m => parseTags(m.tags).some(g => g.toLowerCase() === k)).sort(byLatest);
+    return `<nav class="crumbs" aria-label="מיקום"><a href="${hrefOf('/tags')}" data-link="/tags">תגיות</a><i class="fa-solid fa-chevron-left"></i><span>${esc(id)}</span></nav>
+        <h1 class="page-title">${esc(id)}</h1><p class="page-sub">${topics.length} ${topics.length === 1 ? 'נושא' : 'נושאים'} עם התגית הזו</p>` + topicList(topics);
+}
+
+/* ---------- אירועים ---------- */
+document.addEventListener('click', e => {
+    const b = e.target.closest('[data-act]');
+    if (!b) return;
+    switch (b.dataset.act) {
+        case 'users-sort':
+            state.usersUI.sort = b.dataset.sort;
+            b.parentElement.querySelectorAll('button').forEach(x => x.setAttribute('aria-selected', String(x === b)));
+            paintUsers(); break;
+        case 'user-edit': editUser(b.dataset.uid); break;
+        case 'profile-more': state.profileMax += 60; render({ soft: true }); break;
+    }
+});
+document.addEventListener('input', e => { if (e.target.id === 'users-q') { state.usersUI.q = e.target.value; paintUsers(); } });
+
+/* ---------- רענון שקט ברקע ---------- */
+let refreshing = false;
+async function silentRefresh() {
+    if (refreshing || document.hidden || state.loading || state.submitting || state.inflight > 0) return;
+    refreshing = true;
+    try { await loadData(); } finally { refreshing = false; }
+}
+setInterval(silentRefresh, 30000);
+
+/* ============ חיפוש ============ */
+// נרמול לחיפוש: אותיות קטנות, בלי ניקוד, בלי גרשיים וגרשיים (כך ש"רמב"ם" ו"רמבם" זהים)
+const normQ = s => String(s || '').toLowerCase().replace(/[\u0591-\u05C7]/g, '').replace(/[\u05F3\u05F4"'`]/g, '');
+const hayCache = new WeakMap();
+function hay(p) {
+    const k = (p.title || '') + '\u0001' + (p.tags || '') + '\u0001' + (p.content || '');
+    let c = hayCache.get(p);
+    if (!c || c.k !== k) { c = { k, title: normQ(p.title), tags: normQ(p.tags), body: normQ(stripMd(p.content, 1e9)) }; hayCache.set(p, c); }
+    return c;
+}
+// הדגשה בטוחה: מפצלים את הטקסט המקורי לפי המונחים ועושים escape לכל חלק בנפרד
+function hl(text, terms) {
+    text = String(text || '');
+    const ts = terms.filter(Boolean).map(x => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    if (!ts.length) return esc(text);
+    return text.split(new RegExp('(' + ts.join('|') + ')', 'gi')).map((part, i) => i % 2 ? `<mark>${esc(part)}</mark>` : esc(part)).join('');
+}
+function snippet(p, terms) {
+    const plain = stripMd(p.content, 1e9), low = plain.toLowerCase();
+    let idx = -1;
+    terms.forEach(x => { const i = low.indexOf(x); if (i >= 0 && (idx < 0 || i < idx)) idx = i; });
+    const start = Math.max(0, idx - 45), end = start + 140;
+    return (start > 0 ? '…' : '') + plain.slice(start, end) + (end < plain.length ? '…' : '');
+}
+
+function runSearch(terms) {
+    const visible = new Set(getTopics().map(m => m.topic_id));
+    const topics = [], replies = [];
+    state.posts.forEach(p => {
+        if (!p.topic_id || isCatId(p.topic_id) || !visible.has(p.topic_id)) return;
+        if (isDeleted(p) && !canManage(p)) return;
+        const h = hay(p), all = h.title + ' ' + h.tags + ' ' + h.body;
+        if (!terms.every(x => all.includes(x))) return;
+        let score = 0;
+        terms.forEach(x => {
+            if (h.title.includes(x)) score += 5 + (h.title.startsWith(x) || h.title.includes(' ' + x) ? 3 : 0);
+            if (h.tags.includes(x)) score += 3;
+            if (h.body.includes(x)) score += 1;
+        });
+        (p.title ? topics : replies).push({ p, score });
+    });
+    const order = (a, b) => b.score - a.score || num(String(b.p.id).replace(/\D/g, '')) - num(String(a.p.id).replace(/\D/g, ''));
+    topics.sort(order); replies.sort(order);
+    const users = state.user ? getUsers().filter(u => terms.every(x => normQ(u.name).includes(x))).sort((a, b) => b.count - a.count) : [];
+    const tags = getTagStats().filter(g => terms.every(x => normQ(g.tag).includes(x)));
+    return { topics, replies, users, tags };
+}
+
+function searchHTML(q) {
+    const terms = normQ(q).split(/\s+/).filter(Boolean);
+    if (!terms.length) {
+        const tags = getTagStats().slice(0, 8);
+        return `<div class="sempty"><b>חיפוש בפורום</b>נושאים, הודעות, משתמשים ותגיות</div>` + (tags.length
+            ? `<div class="slabel">תגיות פופולריות</div><div class="schips">${tags.map(g => `<a class="sitem tag" style="padding:5px 14px;border-radius:999px" role="option" href="${hrefOf('/tag/' + encodeURIComponent(g.tag))}" data-link="/tag/${encodeURIComponent(g.tag)}">${esc(g.tag)}</a>`).join('')}</div>` : '');
+    }
+    const r = runSearch(terms);
+    if (!r.topics.length && !r.replies.length && !r.users.length && !r.tags.length) {
+        return `<div class="sempty"><b>לא נמצאו תוצאות</b>נסו מילים אחרות או פחות מילים.</div>`;
+    }
+    const tn = new Map(sortedTopicIds().map((id, i) => [id, i + 1]));
+    const pn = new Map(sortedPostIds().map((id, i) => [id, i + 1]));
+    const mainOf = new Map(getTopics().map(m => [m.topic_id, m]));
+    const item = (path, icon, title, sub) => `<a class="sitem" role="option" href="${hrefOf(path)}" data-link="${path}"><span class="sicon"><i class="fa-solid ${icon}"></i></span><span class="sx"><div class="t">${title}</div><div class="s">${sub}</div></span></a>`;
+    let out = '';
+    if (r.topics.length) {
+        out += '<div class="slabel">נושאים</div>' + r.topics.slice(0, 8).map(({ p }) => {
+            const inTitle = terms.some(x => hay(p).title.includes(x));
+            const sub = inTitle ? `${esc(catName(p.category))} · ${esc(p.author_name || 'אורח')} · ${esc(timeAgo(p.created_at))}` : hl(snippet(p, terms), terms);
+            return item('/topic/' + (tn.get(p.topic_id) || encodeURIComponent(p.topic_id)), 'fa-comments', hl(p.title, terms), sub);
+        }).join('');
+    }
+    if (r.replies.length) {
+        out += '<div class="slabel">הודעות</div>' + r.replies.slice(0, 6).map(({ p }) => {
+            const m = mainOf.get(p.topic_id);
+            return item('/post/' + (pn.get(p.id) || encodeURIComponent(p.id)), 'fa-comment-dots', hl(snippet(p, terms), terms), `${esc(p.author_name || 'אורח')} בנושא ${esc(m ? m.title : '')}`);
+        }).join('');
+    }
+    if (r.users.length) out += '<div class="slabel">משתמשים</div>' + r.users.slice(0, 4).map(u => item('/user/' + u.uid, 'fa-user', hl(u.name, terms), countLabel(u.count, 'הודעה אחת', 'הודעות'))).join('');
+    if (r.tags.length) out += '<div class="slabel">תגיות</div>' + r.tags.slice(0, 4).map(g => item('/tag/' + encodeURIComponent(g.tag), 'fa-tag', hl(g.tag, terms), countLabel(g.count, 'נושא אחד', 'נושאים'))).join('');
+    return out;
+}
+
+let searchEl = null, searchPrev = null, searchTimer;
+function setActiveResult(i) {
+    if (!searchEl) return;
+    const items = [...searchEl.querySelectorAll('.sitem')];
+    if (!items.length) return;
+    const n = (i + items.length) % items.length;
+    items.forEach((el, k) => { el.classList.toggle('active', k === n); el.setAttribute('aria-selected', String(k === n)); });
+    items[n].scrollIntoView({ block: 'nearest' });
+    searchEl.dataset.sel = n;
+}
+function paintSearch() {
+    if (!searchEl) return;
+    $('#search-results', searchEl).innerHTML = searchHTML($('#search-input', searchEl).value);
+    searchEl.dataset.sel = -1;
+    const first = $('.sitem', searchEl);
+    if ($('#search-input', searchEl).value.trim() && first) setActiveResult(0);
+}
+function openSearch() {
+    if (searchEl) return;
+    if (state.loading && !state.posts.length) { toast('הפורום עדיין נטען'); return; }
+    searchPrev = document.activeElement;
+    searchEl = document.createElement('div');
+    searchEl.className = 'overlay search-ov';
+    searchEl.innerHTML = `<div class="spanel" role="dialog" aria-modal="true" aria-label="חיפוש">
+        <div class="shead"><i class="fa-solid fa-magnifying-glass"></i><input id="search-input" placeholder="חיפוש בפורום" autocomplete="off" aria-label="חיפוש" role="combobox" aria-controls="search-results" aria-expanded="true"><span class="kbd">Esc</span></div>
+        <div class="sbody" id="search-results" role="listbox"></div></div>`;
+    searchEl.addEventListener('click', e => {
+        if (e.target === searchEl) closeSearch();
+        else if (e.target.closest('.sitem')) setTimeout(closeSearch, 0);
+    });
+    document.body.appendChild(searchEl);
+    paintSearch();
+    $('#search-input', searchEl).focus();
+}
+function closeSearch() {
+    if (!searchEl) return;
+    searchEl.remove(); searchEl = null;
+    if (searchPrev && searchPrev.focus && document.contains(searchPrev)) searchPrev.focus();
+}
+
+document.addEventListener('click', e => { if (e.target.closest('[data-act="search-open"]')) openSearch(); });
+document.addEventListener('input', e => {
+    if (e.target.id !== 'search-input') return;
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(paintSearch, 120);
+});
+document.addEventListener('keydown', e => {
+    if (searchEl) {
+        const sel = num(searchEl.dataset.sel);
+        if (e.key === 'Escape') { e.preventDefault(); closeSearch(); }
+        else if (e.key === 'ArrowDown') { e.preventDefault(); setActiveResult(sel + 1); }
+        else if (e.key === 'ArrowUp') { e.preventDefault(); setActiveResult(sel - 1); }
+        else if (e.key === 'Enter' && e.target.id === 'search-input') {
+            e.preventDefault();
+            clearTimeout(searchTimer); paintSearch();   // מוודאים שהתוצאות מעודכנות לטקסט האחרון
+            const el = $('.sitem.active', searchEl) || $('.sitem', searchEl);
+            if (el) el.click();
+        }
+        return;
+    }
+    const typing = e.target.matches && e.target.matches('input, textarea, select, [contenteditable]');
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openSearch(); }
+    else if (e.key === '/' && !typing && !e.ctrlKey && !e.metaKey && !e.altKey && !$('.overlay')) { e.preventDefault(); openSearch(); }
+}, true);
+
+/* ============ כלי ניהול ============ */
+const ICONS = ['fa-comments', 'fa-desktop', 'fa-mobile-screen', 'fa-handshake-angle', 'fa-bullhorn', 'fa-book', 'fa-briefcase', 'fa-house', 'fa-heart', 'fa-gamepad', 'fa-music',
+    'fa-camera', 'fa-car', 'fa-wrench', 'fa-graduation-cap', 'fa-utensils', 'fa-plane', 'fa-star', 'fa-question', 'fa-newspaper', 'fa-users', 'fa-globe'];
+const DEFAULT_CATEGORIES = [
+    { title: 'כללי', content: 'שיחה כללית ועדכונים לקהילה', icon: 'fa-comments' },
+    { title: 'עזרה והדדיות', content: 'עוזרים אחד לשני, שאלות ותשובות', icon: 'fa-handshake-angle' },
+    { title: 'לוח מודעות', content: 'מודעות, הכרזות ועדכונים חשובים', icon: 'fa-bullhorn' },
+    { title: 'טכנולוגיה ומחשבים', content: 'עזרה וטיפים בנושאי מחשבים וטכנולוגיה', icon: 'fa-desktop' }
+];
+const isAdminUser_ = () => !!(state.user && state.user.isAdmin);
+const parseEmails = s => String(s || '').split(/[,;\s]+/).map(x => x.trim()).filter(Boolean);
+const allowedList = main => parseEmails(main && main.allowed_emails);
+
+function categoryRow(c) {
+    const now = Date.now();
+    return {
+        id: 'cat_row_' + now + '_' + c.i, topic_id: 'cat_' + (now + c.i), title: c.title, content: c.content, category: c.icon,
+        author_name: state.user.name, author_email: state.user.email, author_avatar: state.user.picture,
+        created_at: new Date().toLocaleString('he-IL'), views: 0, likes: 0, dislikes: 0
+    };
+}
+
+function categoryDialog(cat) {
+    return new Promise(resolve => {
+        const prev = document.activeElement;
+        let icon = cat && cat.category ? cat.category : ICONS[0];
+        const icons = ICONS.includes(icon) ? ICONS : [icon, ...ICONS];
+        const ov = document.createElement('div');
+        ov.className = 'overlay';
+        ov.innerHTML = `<div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dlg-t" style="max-width:460px"><h3 id="dlg-t">${cat ? 'עריכת קטגוריה' : 'קטגוריה חדשה'}</h3>
+            <label class="flabel" for="cat-name" style="margin-top:14px">שם הקטגוריה</label><input id="cat-name" class="input" maxlength="40" value="${esc(cat ? cat.title : '')}" autocomplete="off">
+            <label class="flabel" for="cat-desc">תיאור קצר</label><input id="cat-desc" class="input" maxlength="120" value="${esc(cat ? cat.content : '')}" autocomplete="off">
+            <span class="flabel">אייקון</span><div class="icon-grid" role="radiogroup" aria-label="אייקון">${icons.map(i => `<button type="button" class="icon-opt" role="radio" aria-checked="${i === icon}" data-icon="${esc(i)}" aria-label="${esc(i.replace('fa-', ''))}"><i class="fa-solid ${esc(i)}"></i></button>`).join('')}</div>
+            <div class="dialog-actions" style="justify-content:space-between">${cat ? '<button type="button" class="btn btn-ghost btn-sm" style="color:var(--danger)" data-r="del">מחיקת הקטגוריה</button>' : '<span></span>'}
+                <span style="display:flex;gap:10px"><button type="button" class="btn btn-ghost btn-sm" data-r="0">ביטול</button><button type="button" class="btn btn-primary btn-sm" data-r="1">שמירה</button></span></div></div>`;
+        const close = v => { document.removeEventListener('keydown', onKey, true); ov.remove(); if (prev && prev.focus) prev.focus(); resolve(v); };
+        const submit = () => {
+            const title = $('#cat-name', ov).value.trim();
+            if (!title) { toast('יש להזין שם לקטגוריה', 'error'); return; }
+            close({ action: 'save', title, content: $('#cat-desc', ov).value.trim(), icon });
+        };
+        const onKey = e => {
+            if (e.key === 'Escape') { e.preventDefault(); close(null); }
+            else if (e.key === 'Enter' && e.target.tagName === 'INPUT') { e.preventDefault(); submit(); }
+        };
+        ov.addEventListener('click', e => {
+            const io = e.target.closest('.icon-opt');
+            if (io) { icon = io.dataset.icon; ov.querySelectorAll('.icon-opt').forEach(x => x.setAttribute('aria-checked', String(x === io))); return; }
+            const b = e.target.closest('[data-r]');
+            if (b) { if (b.dataset.r === '1') submit(); else if (b.dataset.r === 'del') close({ action: 'delete' }); else close(null); }
+            else if (e.target === ov) close(null);
+        });
+        document.addEventListener('keydown', onKey, true);
+        document.body.appendChild(ov);
+        $('#cat-name', ov).focus();
+    });
+}
+
+async function editCategory(id) {
+    if (!isAdminUser_()) return;
+    const cat = id ? getCategories().find(c => c.topic_id === id) : null;
+    const r = await categoryDialog(cat);
+    if (!r) return;
+    if (r.action === 'delete') {
+        const yes = await confirmDialog('מחיקת קטגוריה', 'מחיקת הקטגוריה לא תמחק את הנושאים שבתוכה, אבל הם לא ישויכו יותר לקטגוריה. להמשיך?', 'מחיקה');
+        if (!yes) return;
+        const ok = await api.remove('topic_id', id);
+        if (!ok) { toast('המחיקה נכשלה, נסו שוב', 'error'); return; }
+        state.posts = state.posts.filter(p => p.topic_id !== id);
+        saveCache();
+        toast('הקטגוריה נמחקה', 'success');
+        if (parseRoute().type === 'category') go('/'); else render({ soft: true });
+        return;
+    }
+    if (cat) {
+        const ok = await api.update('topic_id', id, { title: r.title, content: r.content, category: r.icon });
+        if (!ok) { toast('העדכון נכשל, נסו שוב', 'error'); return; }
+        Object.assign(cat, { title: r.title, content: r.content, category: r.icon });
+        toast('הקטגוריה עודכנה', 'success');
+    } else {
+        const row = categoryRow({ title: r.title, content: r.content, icon: r.icon, i: 0 });
+        const ok = await api.insert([row]);
+        if (!ok) { toast('יצירת הקטגוריה נכשלה, נסו שוב', 'error'); return; }
+        state.posts.push(row);
+        toast('הקטגוריה נוצרה', 'success');
+    }
+    saveCache();
+    render({ soft: true });
+}
+
+async function createDefaultCategories() {
+    if (!isAdminUser_() || getCategories().length) return;
+    const rows = DEFAULT_CATEGORIES.map((c, i) => categoryRow({ ...c, i }));
+    const ok = await api.insert(rows);
+    if (!ok) { toast('יצירת הקטגוריות נכשלה, נסו שוב', 'error'); return; }
+    state.posts.push(...rows);
+    saveCache();
+    toast('נוצרו קטגוריות ברירת מחדל', 'success');
+    render({ soft: true });
+}
+
+function threadActions(main) {
+    const parts = [followTopicBtn(main)];
+    if (isAdminUser_() && !isDeleted(main)) {
+        const pinned = isPinned(main), limited = allowedList(main).length > 0;
+        parts.push(`<button type="button" class="btn btn-ghost btn-sm" data-act="thread-pin" data-id="${esc(main.topic_id)}" aria-pressed="${pinned}"><i class="fa-solid fa-thumbtack"></i>${pinned ? 'ביטול הצמדה' : 'הצמדת הנושא'}</button>`);
+        parts.push(`<button type="button" class="btn btn-ghost btn-sm" data-act="thread-access" data-id="${esc(main.topic_id)}"><i class="fa-solid fa-user-lock"></i>${limited ? 'עריכת הרשאות כתיבה' : 'הגבלת כתיבה'}</button>`);
+    }
+    const html = parts.filter(Boolean).join('');
+    return html ? `<div class="thread-actions">${html}</div>` : '';
+}
+
+async function togglePin(topicId) {
+    const main = isAdminUser_() ? threadData(topicId).main : null;
+    if (!main) return;
+    const prev = main.pinned, next = isPinned(main) ? '' : '1';
+    main.pinned = next; paintHead();
+    const ok = await api.update('id', main.id, { pinned: next });
+    if (!ok) { main.pinned = prev; paintHead(); toast('שגיאה בעדכון ההצמדה, נסו שוב', 'error'); return; }
+    saveCache();
+    toast(next ? 'הנושא הוצמד לראש הרשימות' : 'ההצמדה בוטלה', 'success');
+}
+
+async function manageAccess(topicId) {
+    const main = isAdminUser_() ? threadData(topicId).main : null;
+    if (!main) return;
+    const r = await formDialog('הגבלת כתיבה בנושא', [{ id: 'emails', label: 'אימיילים שמורשים לכתוב (מופרדים בפסיקים). ריק = כולם', value: allowedList(main).join(', '), placeholder: 'name@gmail.com, name2@gmail.com' }], 'שמירה',
+        v => { const bad = parseEmails(v.emails).find(x => !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(x)); return bad ? `כתובת לא תקינה: ${bad}` : ''; });
+    if (!r) return;
+    const cleaned = parseEmails(r.emails).join(', '), prev = main.allowed_emails;
+    main.allowed_emails = cleaned; paintHead(); paintComposer();
+    const ok = await api.update('id', main.id, { allowed_emails: cleaned });
+    if (!ok) { main.allowed_emails = prev; paintHead(); paintComposer(); toast('שגיאה בעדכון ההרשאות, נסו שוב', 'error'); return; }
+    saveCache();
+    toast(cleaned ? 'הכתיבה בנושא הוגבלה למשתמשים שנבחרו' : 'הכתיבה בנושא פתוחה לכולם', 'success');
+}
+
+async function purgeTopic(topicId) {
+    const main = threadData(topicId).main;
+    if (!main || !canManage(main)) return;
+    const yes = await confirmDialog('מחיקה לצמיתות', 'כל הודעות הנושא יימחקו מהגיליון ולא ניתן יהיה לשחזר אותן.', 'מחיקה לצמיתות');
+    if (!yes) return;
+    const ok = await api.remove('topic_id', topicId);
+    if (!ok) { toast('המחיקה נכשלה, נסו שוב', 'error'); return; }
+    state.posts = state.posts.filter(p => p.topic_id !== topicId);
+    saveCache();
+    toast('הנושא נמחק לצמיתות', 'success');
+    go('/');
+}
+
+document.addEventListener('click', e => {
+    const b = e.target.closest('[data-act]');
+    if (!b) return;
+    switch (b.dataset.act) {
+        case 'cat-new': editCategory(null); break;
+        case 'cat-edit': editCategory(b.dataset.id); break;
+        case 'cat-defaults': createDefaultCategories(); break;
+        case 'thread-pin': togglePin(b.dataset.id); break;
+        case 'thread-access': manageAccess(b.dataset.id); break;
+        case 'purge': purgeTopic(b.dataset.id); break;
+    }
+});
+
 /* ============ מסכים ============ */
 const views = {
     home() {
-        const cats = getCategories(), counts = {};
+        const cats = getCategories(), counts = {}, admin = !!(state.user && state.user.isAdmin);
         getTopics().forEach(t => { counts[t.category] = (counts[t.category] || 0) + 1; });
         const latest = getTopics().sort(byLatest).slice(0, 8);
         const catHTML = cats.length ? `<div class="grid">${cats.map(c => {
             const icon = /^fa-[a-z0-9-]+$/.test(c.category || '') ? c.category : 'fa-comments';
             const n = counts[c.topic_id] || 0, p = categoryNumber(c.topic_id) || encodeURIComponent(c.topic_id);
-            return `<a class="card cat-card" href="${hrefOf('/category/' + p)}" data-link="/category/${p}">
+            return `<div class="ucell"><a class="card cat-card" href="${hrefOf('/category/' + p)}" data-link="/category/${p}">
                 <div class="cat-icon"><i class="fa-solid ${icon}"></i></div>
                 <h3>${esc(c.title)}</h3><p>${esc(c.content || '')}</p>
-                <div class="cat-meta">${n} ${n === 1 ? 'נושא' : 'נושאים'}</div></a>`;
-        }).join('')}</div>` : `<div class="card empty"><i class="fa-regular fa-folder-open"></i><b>אין עדיין קטגוריות</b></div>`;
+                <div class="cat-meta">${n} ${n === 1 ? 'נושא' : 'נושאים'}</div></a>
+                ${admin ? `<button type="button" class="btn btn-ghost edit-user" data-act="cat-edit" data-id="${esc(c.topic_id)}" title="עריכת קטגוריה" aria-label="עריכת ${esc(c.title)}"><i class="fa-solid fa-pen"></i></button>` : ''}</div>`;
+        }).join('')}</div>` : `<div class="card empty"><i class="fa-regular fa-folder-open"></i><b>אין עדיין קטגוריות</b>${admin ? '<br><button type="button" class="btn btn-primary" style="margin-top:16px" data-act="cat-defaults">יצירת קטגוריות ברירת מחדל</button>' : ''}</div>`;
         return `<h1 class="page-title">ברוכים הבאים לפורום</h1><p class="page-sub">הקהילה הדיגיטלית של השכונה</p>
-            <div class="section-title">קטגוריות</div>${catHTML}
+            <div class="section-title">קטגוריות${admin ? '<button type="button" class="btn btn-ghost btn-sm" data-act="cat-new"><i class="fa-solid fa-plus"></i>קטגוריה חדשה</button>' : ''}</div>${catHTML}
             <div class="section-title">נושאים אחרונים <a href="${hrefOf('/latest')}" data-link="/latest">לכל הנושאים</a></div>${topicList(latest)}`;
     },
     latest() {
@@ -856,28 +1752,30 @@ const views = {
     category({ id }) {
         const cat = getCategories().find(c => c.topic_id === id);
         if (!cat) return `<div class="card empty"><i class="fa-regular fa-circle-question"></i><b>הקטגוריה לא נמצאה</b><a class="btn btn-primary" style="margin-top:14px" href="${hrefOf('/')}" data-link="/">חזרה לדף הבית</a></div>`;
-        return `<h1 class="page-title">${esc(cat.title)}</h1><p class="page-sub">${esc(cat.content || '')}</p>` +
+        const np = '/new/' + (categoryNumber(id) || encodeURIComponent(id));
+        return `<div class="page-head"><div><h1 class="page-title">${esc(cat.title)}</h1><p class="page-sub">${esc(cat.content || '')}</p></div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">${state.user && state.user.isAdmin ? `<button type="button" class="btn btn-ghost" data-act="cat-edit" data-id="${esc(id)}"><i class="fa-solid fa-pen"></i>עריכת קטגוריה</button>` : ''}
+            <a class="btn btn-primary" href="${hrefOf(np)}" data-link="${np}"><i class="fa-solid fa-plus"></i>נושא חדש בקטגוריה</a></div></div>` +
             topicList(getTopics().filter(t => t.category === id).sort(byLatest));
     },
-    login() {
-        if (state.user) { setTimeout(() => go('/'), 0); return ''; }
-        setTimeout(mountGoogleButton, 0);
-        return `<div class="card login-card"><h2>התחברות לפורום</h2><p>התחברו עם חשבון גוגל כדי לפתוח נושאים ולהגיב.</p><div id="g-btn"></div></div>`;
-    },
+    login: loginView,
     topic: topicView,
     post: postView,
-    user() { return soon('פרופיל משתמש'); },
-    users() { return soon('משתמשים'); },
-    tags() { return soon('תגיות'); },
-    tag() { return soon('תגית'); }
+    new: formView,
+    edit: formView,
+    user: profileView,
+    users: usersView,
+    tags: tagsView,
+    tag: tagView
 };
 
 function render(opts = {}) {
     const route = parseRoute();
     const token = ++state.renderToken;
-    renderNav(route.type);
+    renderNav(route.type === 'tag' ? 'tags' : route.type);
     renderUser();
     const app = $('#app');
+    $('#reg-banner').hidden = !(state.needsReg && route.type !== 'login');
     if (state.loading && !state.posts.length && route.type !== 'login') { app.innerHTML = skeletons(5); state.shownKey = ''; return; }
     if (state.loadError && route.type !== 'login') {
         app.innerHTML = `<div class="card empty"><i class="fa-solid fa-wifi"></i><b>לא הצלחנו לטעון את הפורום</b>בדקו את החיבור ונסו שוב.<br><button class="btn btn-primary" id="retry" style="margin-top:16px">נסו שוב</button></div>`;
@@ -894,6 +1792,10 @@ function render(opts = {}) {
         if (opts.composer || !ta || document.activeElement !== ta) paintComposer();
         return;
     }
+    if (opts.soft && route.type === 'users' && state.shownKey === key && $('#users-list')) { paintUsers(); return; }
+    if (opts.soft && route.type === 'login' && state.shownKey === key && $('#login-address')) return;
+    // רענון שקט לא נוגע בטופס פתוח, כדי שלא יאבד מה שהוקלד
+    if (opts.soft && (route.type === 'new' || route.type === 'edit') && state.shownKey === key && $('#topic-form')) return;
     const html = (views[route.type] || views.home)(route);
     if (token !== state.renderToken) return;
     app.innerHTML = html;
@@ -901,27 +1803,35 @@ function render(opts = {}) {
     if (opts.nav) window.scrollTo(0, 0);
     if ((route.type === 'topic' || route.type === 'post') && $('#thread-posts')) {
         const { main } = threadData(state.topicId);
-        if (main) registerView(main);
+        if (main) { registerView(main); markTopicSeen(main.topic_id); }
         if (state.pendingScroll) { const id = state.pendingScroll; state.pendingScroll = null; setTimeout(() => scrollToPost(id), 60); }
     }
 }
 
 /* ============ משתמש והתחברות ============ */
+let userSig = '';
 function renderUser() {
-    const box = $('#user-area');
-    const u = state.user;
+    const box = $('#user-area'), u = state.user;
+    const sig = u ? [u.email, u.name, u.picture, u.registered ? 1 : 0].join('|') : 'out';
+    if (sig === userSig && box.firstChild) return;   // בלי בנייה מחדש, כדי שתפריטים פתוחים לא ייסגרו ברענון
+    userSig = sig;
     if (!u) {
         box.innerHTML = `<a class="btn btn-primary" href="${hrefOf('/login')}" data-link="/login"><i class="fa-brands fa-google"></i>התחברות</a>`;
         return;
     }
-    box.innerHTML = `<div class="user-wrap">
+    const bell = u.registered ? `<div class="bell-wrap">
+        <button type="button" class="btn btn-ghost btn-icon" id="bell-btn" data-act="bell-toggle" aria-haspopup="true" aria-expanded="false" aria-label="התראות"><i class="fa-regular fa-bell"></i><span class="badge-dot" id="bell-badge" hidden></span></button>
+        <div class="notif-panel" id="notif-panel" role="dialog" aria-label="התראות"><div class="notif-head"><b>התראות</b><button type="button" class="act" data-act="notif-readall">סימון הכל כנקרא</button></div><div id="notif-list"></div></div></div>` : '';
+    box.innerHTML = bell + `<div class="user-wrap">
         <button class="user-btn" id="user-btn" aria-haspopup="true" aria-expanded="false" aria-label="תפריט משתמש">${avatar(u.name, u.picture, 38)}</button>
         <div class="menu" id="user-menu" role="menu">
             <div class="menu-head"><b>${esc(u.name)}</b><small>${esc(u.email)}</small></div>
+            <a class="menu-item" href="${hrefOf(userPath(u.email))}" data-link="${userPath(u.email)}" role="menuitem"><i class="fa-regular fa-user"></i>הפרופיל שלי</a>
             <button class="menu-item danger" id="logout-btn" role="menuitem"><i class="fa-solid fa-right-from-bracket"></i>התנתקות</button>
         </div></div>`;
-    $('#user-btn').onclick = e => { e.stopPropagation(); const m = $('#user-menu'); const open = m.classList.toggle('open'); $('#user-btn').setAttribute('aria-expanded', open); };
+    $('#user-btn').onclick = e => { e.stopPropagation(); closeNotif(); const m = $('#user-menu'); const open = m.classList.toggle('open'); $('#user-btn').setAttribute('aria-expanded', open); };
     $('#logout-btn').onclick = logout;
+    paintNotifs();
 }
 function closeMenu() { const m = $('#user-menu'); if (m) { m.classList.remove('open'); $('#user-btn').setAttribute('aria-expanded', 'false'); } }
 document.addEventListener('click', e => { if (!e.target.closest('.user-wrap')) closeMenu(); });
@@ -937,24 +1847,35 @@ function parseJwt(token) {
 function onCredential(resp) {
     const d = parseJwt(resp.credential);
     if (!d || !d.email) { toast('ההתחברות נכשלה, נסו שוב', 'error'); return; }
+    // אם למשתמש כבר יש היסטוריה בפורום, שומרים את השם והתמונה שנקבעו לו (גם אם מנהל שינה אותם)
+    const ex = [...state.posts].reverse().find(p => p.author_email === d.email);
     const prev = safeJSON(localStorage.getItem(CFG.USER_KEY), null);
     const same = prev && prev.email === d.email ? prev : null;
     state.user = {
-        name: same && same.name ? same.name : d.name,
+        name: ex ? (ex.author_name || d.name) : d.name,
         email: d.email,
-        picture: same && same.picture ? same.picture : d.picture,
+        picture: ex ? (ex.author_avatar || '') : d.picture,
         isAdmin: d.email === CFG.ADMIN_EMAIL,
         registered: same ? !!same.registered : false,
         address: same ? same.address : undefined
     };
-    localStorage.setItem(CFG.USER_KEY, JSON.stringify(state.user));
-    toast('התחברת בהצלחה', 'success');
-    if (parseRoute().type === 'login') go('/'); else render({ soft: true, composer: true });
+    saveUser();
+    const onLogin = parseRoute().type === 'login';
+    const addr = ($('#login-address') || {}).value, conf = ($('#login-confirm') || {}).checked;
+    if (onLogin && addr && addr.trim() && conf) {
+        registerUser(addr.trim()).then(ok => { if (ok) go(consumeReturn()); else render(); });
+    } else {
+        toast('התחברת בהצלחה', 'success');
+        checkRegistration();
+        if (onLogin) { if (state.user.registered && state.user.address) go(consumeReturn()); else render(); }
+        else render({ soft: true, composer: true });
+    }
 }
 function logout() {
     state.user = null;
     localStorage.removeItem(CFG.USER_KEY);
     if (window.google && google.accounts) google.accounts.id.disableAutoSelect();
+    resetSocial();
     toast('התנתקת מהחשבון');
     render({ soft: true, composer: true });
 }
@@ -971,8 +1892,320 @@ async function mountGoogleButton() {
     if (!box) return;
     for (let i = 0; i < 50 && !gReady; i++) await wait(200);
     if (!gReady) { box.innerHTML = '<span style="color:var(--muted)">שירות ההתחברות של גוגל לא נטען. רעננו את העמוד ונסו שוב.</span>'; return; }
+    if ($('#g-btn') === box) box.innerHTML = '';
     if ($('#g-btn') === box) google.accounts.id.renderButton(box, { theme: 'outline', size: 'large', shape: 'pill', text: 'signin_with', locale: 'he', width: 280 });
 }
+
+/* ============ הרשמה, מעקב והתראות (API המשתמשים) ============ */
+const curPath = () => { let p = location.pathname; if (BASE && p.indexOf(BASE) === 0) p = p.slice(BASE.length); p = p.replace(/^\/index\.html$/i, ''); return (p || '/') + location.search; };
+const consumeReturn = () => { const r = state.returnTo || '/'; state.returnTo = null; return r; };
+const saveUser = () => { try { localStorage.setItem(CFG.USER_KEY, JSON.stringify(state.user)); } catch (e) {} };
+const isConfirmed = v => v === true || (typeof v === 'string' && v.trim().toUpperCase() === 'TRUE');
+const loginLink = () => `<a class="btn btn-primary" href="${hrefOf('/login')}" data-link="/login"><i class="fa-brands fa-google"></i>התחברות והרשמה</a>`;
+
+async function usersGet(query) {
+    try {
+        const res = await request(CFG.USERS_API_URL + '?' + query, {}, 15000);
+        if (!res.ok) return { ok: false };
+        return { ok: true, data: await res.json() };
+    } catch (e) { return { ok: false }; }
+}
+async function usersPost(body, { retries = 0 } = {}) {
+    for (let i = 0; i <= retries; i++) {
+        try {
+            const res = await request(CFG.USERS_API_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(body) }, 20000);
+            if (res.ok) { const j = await res.json().catch(() => null); if (!(j && j.error)) return true; }
+        } catch (e) { /* ננסה שוב */ }
+        if (i < retries) await wait(700);
+    }
+    return false;
+}
+
+/* ---------- דף הרשמה והתחברות ---------- */
+function loginView() {
+    const u = state.user;
+    if (u && u.registered && u.address) { setTimeout(() => go(consumeReturn()), 0); return ''; }
+    const complete = !!u;
+    setTimeout(updateLoginButton, 0);
+    return `<div class="card login-card reg-card">
+        <div class="reg-icon"><i class="fa-solid fa-people-group"></i></div>
+        <h2>${complete ? 'השלמת הרשמה' : 'הצטרפות לפורום נווה יעקב'}</h2>
+        <p>הפורום מיועד לתושבי ותושבות שכונת נווה יעקב. ${complete ? 'נותר למלא כתובת ולאשר את הכללים.' : 'לפני ההתחברות, נבקש כמה פרטים ואישור קצר.'}</p>
+        <div class="guidelines"><h4><i class="fa-solid fa-shield-halved"></i> כללי שימוש הולם</h4><ul>
+            <li>יש לנהוג בכבוד כלפי חברי וחברות הקהילה, גם במחלוקת.</li>
+            <li>אין לפרסם תוכן פוגעני, מטעה, מסחרי לא מורשה או פרטי מידע אישי של אחרים.</li>
+            <li>הפורום מיועד לתושבי השכונה. הכתובת המוזנת משמשת לאימות זה בלבד.</li>
+            <li>המנהלים רשאים להסיר תוכן או לחסום משתמשים שמפרים את הכללים.</li></ul></div>
+        <label class="flabel" for="login-address">כתובת מגורים בנווה יעקב</label>
+        <input id="login-address" class="input" placeholder="לדוגמה: רחוב הדגן 12" value="${esc((u && u.address) || '')}" autocomplete="street-address">
+        <label class="check"><input type="checkbox" id="login-confirm"><span>אני מצהיר/ה ומתחייב/ת שאני מתגורר/ת בשכונת נווה יעקב, ומסכים/ה לשימוש הולם בפורום בהתאם לכללים שלעיל</span></label>
+        ${complete
+            ? '<button type="button" class="btn btn-primary" style="width:100%" data-act="reg-submit">השלמת הרשמה</button>'
+            : '<div id="g-btn" hidden></div><div class="lock" id="login-lock"><i class="fa-solid fa-lock"></i>מלאו את הפרטים למעלה כדי להמשיך עם Google</div>'}</div>`;
+}
+const loginReady = () => !!(($('#login-address') || {}).value || '').trim() && !!($('#login-confirm') || {}).checked;
+function updateLoginButton() {
+    const box = $('#g-btn'), lock = $('#login-lock');
+    if (!box) return;
+    const ok = loginReady();
+    box.hidden = !ok;
+    if (lock) lock.hidden = ok;
+    if (ok && !box.dataset.mounted) { box.dataset.mounted = '1'; mountGoogleButton(); }
+}
+async function registerUser(address) {
+    const u = state.user;
+    if (!u) return false;
+    const ok = await usersPost({ action: 'registerUser', data: { email: u.email, name: u.name, avatar: u.picture, address, confirmed_neve_yaakov: true, uid: userIdFromEmail(u.email) } }, { retries: 1 });
+    if (!ok) { toast('שגיאה בשמירת ההרשמה, נסו שוב', 'error'); return false; }
+    u.address = address; u.registered = true; saveUser();
+    state.needsReg = false;
+    toast('ההרשמה הושלמה, ברוכים הבאים', 'success');
+    renderUser();
+    await loadSocial();
+    startPolling();
+    return true;
+}
+async function checkRegistration() {
+    const u = state.user;
+    if (!u) return;
+    const known = !!(u.registered && u.address);
+    if (known) loadSocial().then(startPolling);
+    const r = await usersGet('action=getUser&email=' + encodeURIComponent(u.email));
+    if (!r.ok || state.user !== u) return;       // השרת לא זמין: לא חוסמים ולא מציקים
+    const info = r.data;
+    if (info && info.address && isConfirmed(info.confirmed_neve_yaakov)) {
+        u.address = info.address; u.registered = true; saveUser();
+        state.needsReg = false;
+        if (!known) { renderUser(); await loadSocial(); startPolling(); }
+    } else if (!known) {
+        state.needsReg = true;
+    }
+    $('#reg-banner').hidden = !(state.needsReg && parseRoute().type !== 'login');
+    render({ soft: true });
+}
+
+/* ---------- מעקב ---------- */
+async function loadFollows() {
+    if (!state.user) return;
+    const r = await usersGet('action=getFollows&email=' + encodeURIComponent(state.user.email));
+    if (!r.ok) return;
+    const f = { topics: new Set(), users: new Set() };
+    (Array.isArray(r.data) ? r.data : []).forEach(x => {
+        if (x.type === 'topic') f.topics.add(String(x.target_id));
+        else if (x.type === 'user') f.users.add(String(x.target_id).toLowerCase());
+    });
+    state.follows = f;
+}
+const followingTopic = id => state.follows.topics.has(String(id));
+const followingUser = email => state.follows.users.has(String(email).toLowerCase());
+async function setFollow(type, target, on) {
+    const set = type === 'topic' ? state.follows.topics : state.follows.users;
+    const key = type === 'topic' ? String(target) : String(target).toLowerCase();
+    if (on) set.add(key); else set.delete(key);
+    const ok = await usersPost({ action: on ? 'follow' : 'unfollow', data: { user_email: state.user.email, type, target_id: target } });
+    if (!ok) { if (on) set.delete(key); else set.add(key); }
+    return ok;
+}
+function followTopicBtn(main) {
+    if (!state.user || isDeleted(main)) return '';
+    const f = followingTopic(main.topic_id);
+    return `<button type="button" class="btn btn-ghost btn-sm" data-act="follow-topic" data-id="${esc(main.topic_id)}" aria-pressed="${f}"><i class="fa-${f ? 'solid' : 'regular'} fa-bell"></i>${f ? 'עוקב/ת אחרי הנושא' : 'מעקב אחרי הנושא'}</button>`;
+}
+function followUserBtn(u) {
+    if (!state.user || emailEq(state.user.email, u.email)) return '';
+    const f = followingUser(u.email);
+    return `<button type="button" class="btn ${f ? 'btn-ghost' : 'btn-primary'} btn-sm" data-act="follow-user" data-uid="${u.uid}" aria-pressed="${f}"><i class="fa-${f ? 'solid' : 'regular'} fa-bell"></i>${f ? 'עוקב/ת' : 'מעקב'}</button>`;
+}
+async function toggleFollowTopic(id) {
+    if (!state.user) return;
+    const on = !followingTopic(id);
+    paintHeadSoon(on);
+    const ok = await setFollow('topic', id, on);
+    paintHead();
+    toast(ok ? (on ? 'מעכשיו תקבלו התראות על הנושא' : 'הפסקתם לעקוב אחרי הנושא') : 'שגיאה בעדכון המעקב, נסו שוב', ok ? 'success' : 'error');
+}
+function paintHeadSoon(on) { const set = state.follows.topics; const id = state.topicId; if (on) set.add(String(id)); else set.delete(String(id)); paintHead(); }
+async function toggleFollowUser(uid) {
+    const u = getUsers().find(x => x.uid === uid);
+    if (!state.user || !u) return;
+    const on = !followingUser(u.email);
+    const ok = await setFollow('user', u.email, on);
+    render({ soft: true });
+    toast(ok ? (on ? 'מעכשיו תקבלו התראות על המשתמש' : 'הפסקתם לעקוב אחרי המשתמש') : 'שגיאה בעדכון המעקב, נסו שוב', ok ? 'success' : 'error');
+}
+function autoFollowTopic(id) { if (state.user && !followingTopic(id)) setFollow('topic', id, true); }
+
+/* ---------- התראות ---------- */
+const isUnread = n => String(n.is_read) !== 'TRUE' && String(n.seen_v) !== 'V';
+async function loadNotifs() {
+    if (!state.user) return;
+    const r = await usersGet('action=getNotifications&email=' + encodeURIComponent(state.user.email));
+    if (!r.ok || !state.user) return;
+    const fresh = Array.isArray(r.data) ? r.data : [];
+    // תשובת שרת ישנה לא מחזירה התראה שכבר סומנה כנקראה אצלנו
+    fresh.forEach(n => { if (state.locallyRead.has(String(n.id))) n.is_read = 'TRUE'; if (state.locallySeen.has(String(n.id))) n.seen_v = 'V'; });
+    state.notifs = fresh;
+    paintNotifs();
+}
+const loadSocial = () => Promise.all([loadFollows(), loadNotifs()]);
+function startPolling() {
+    if (state.notifTimer) return;
+    state.notifTimer = setInterval(() => { if (state.user && state.user.registered && !document.hidden) loadNotifs(); }, 20000);
+}
+function resetSocial() {
+    clearInterval(state.notifTimer); state.notifTimer = null;
+    state.follows = { topics: new Set(), users: new Set() }; state.notifs = [];
+    state.needsReg = false; $('#reg-banner').hidden = true;
+    document.title = BASE_TITLE;
+}
+const BASE_TITLE = 'פורום נווה יעקב';
+function paintNotifs() {
+    const unread = state.notifs.filter(isUnread).length;
+    const badge = $('#bell-badge');
+    if (badge) { badge.hidden = !unread; badge.textContent = unread > 99 ? '99+' : unread; }
+    document.title = (unread ? `(${unread > 99 ? '99+' : unread}) ` : '') + BASE_TITLE;
+    const list = $('#notif-list');
+    if (!list) return;
+    list.innerHTML = state.notifs.length ? state.notifs.slice(0, 40).map(n => {
+        const un = isUnread(n);
+        return `<button type="button" class="notif-item ${un ? 'unread' : ''}" data-act="notif-open" data-id="${esc(n.id)}"><span class="ndot ${un ? '' : 'off'}"></span>
+            <span><div class="ntext">${esc(n.message || '')}</div><div class="ntime">${esc(timeAgo(n.created_at))}</div></span></button>`;
+    }).join('') : '<div class="notif-empty">אין עדיין התראות</div>';
+}
+function closeNotif() { const p = $('#notif-panel'); if (p) { p.classList.remove('open'); const b = $('#bell-btn'); if (b) b.setAttribute('aria-expanded', 'false'); } }
+function openNotif(id) {
+    const n = state.notifs.find(x => String(x.id) === String(id));
+    if (!n) return;
+    if (isUnread(n)) { n.is_read = 'TRUE'; state.locallyRead.add(String(n.id)); paintNotifs(); usersPost({ action: 'markRead', data: { id: n.id } }); }
+    closeNotif();
+    if (n.post_id) go('/post/' + encodeURIComponent(n.post_id));
+    else if (n.topic_id) go('/topic/' + (topicNumber(n.topic_id) || encodeURIComponent(n.topic_id)));
+}
+function readAllNotifs() {
+    if (!state.user || !state.notifs.length) return;
+    state.notifs.forEach(n => { n.is_read = 'TRUE'; state.locallyRead.add(String(n.id)); });
+    paintNotifs();
+    usersPost({ action: 'markRead', data: { user_email: state.user.email } });
+}
+// צפייה בנושא מסמנת את ההתראות שלו כנקראו, גם בלי ללחוץ על הפעמון
+function markTopicSeen(topicId) {
+    if (!state.user || !topicId) return;
+    let changed = false;
+    state.notifs.forEach(n => { if (String(n.topic_id) === String(topicId) && isUnread(n)) { n.seen_v = 'V'; state.locallySeen.add(String(n.id)); changed = true; } });
+    if (!changed) return;
+    paintNotifs();
+    usersPost({ action: 'markSeen', data: { user_email: state.user.email, topic_id: topicId } });
+}
+
+/* ---------- שליחת התראות ---------- */
+const mentionedUids = content => { const out = new Set(); String(content || '').replace(/@\[[^\]]+\]\(([^()\s]+)\)/g, (m, uid) => out.add(uid)); return [...out]; };
+function mkNotif(email, type, topicId, postId, message) {
+    return { user_email: email, type, topic_id: topicId || '', post_id: postId || '', actor_name: state.user.name, actor_email: state.user.email, message };
+}
+async function notifyFollowers(kind, target, message, type, topicId, postId) {
+    if (!state.user) return;
+    const r = await usersGet(`action=getFollowers&type=${kind}&target_id=${encodeURIComponent(target)}`);
+    if (!r.ok) return;
+    const targets = (Array.isArray(r.data) ? r.data : []).filter(f => !emailEq(f.user_email, state.user.email)).map(f => mkNotif(f.user_email, type, topicId, postId, message));
+    if (targets.length) usersPost({ action: 'addNotification', data: targets });
+}
+function notifyMentioned(content, message, topicId, postId) {
+    if (!state.user) return;
+    const users = getUsers();
+    const targets = mentionedUids(content).map(uid => users.find(u => u.uid === uid)).filter(u => u && !emailEq(u.email, state.user.email)).map(u => mkNotif(u.email, 'mention', topicId, postId, message));
+    if (targets.length) usersPost({ action: 'addNotification', data: targets });
+}
+function afterNewTopic(post) {
+    const u = state.user;
+    if (!u) return;
+    autoFollowTopic(post.topic_id);
+    notifyFollowers('user', u.email, `${u.name} פתח/ה נושא חדש: "${post.title}"`, 'new_topic', post.topic_id, '');
+    notifyMentioned(post.content, `${u.name} תייג/ה אותך בנושא "${post.title}"`, post.topic_id, post.id);
+}
+function afterReply(post, main) {
+    const u = state.user;
+    if (!u) return;
+    const title = main ? main.title : '';
+    autoFollowTopic(post.topic_id);
+    notifyFollowers('topic', post.topic_id, `${u.name} הגיב/ה בנושא "${title}"`, 'reply', post.topic_id, post.id);
+    notifyMentioned(post.content, `${u.name} תייג/ה אותך בנושא "${title}"`, post.topic_id, post.id);
+}
+
+/* ---------- השלמת אזכור עם @ ---------- */
+function closeMention() { if (state.mention) { state.mention.el.remove(); state.mention = null; } }
+function paintMention() {
+    const m = state.mention;
+    if (!m) return;
+    m.el.innerHTML = m.items.map((u, i) => `<button type="button" class="${i === m.sel ? 'active' : ''}" data-act="mention-pick" data-i="${i}" role="option">${avatar(u.name, u.avatar, 26)}<span>${esc(u.name)}</span></button>`).join('');
+}
+function updateMention(ta) {
+    if (!state.user) return;
+    const before = ta.value.slice(0, ta.selectionStart);
+    const mt = before.match(/(?:^|\s)@([^\s@\[\]()]{0,20})$/);
+    if (!mt) { closeMention(); return; }
+    const q = normQ(mt[1]);
+    const items = getUsers().filter(u => !q || normQ(u.name).includes(q)).sort((a, b) => b.count - a.count).slice(0, 6);
+    if (!items.length) { closeMention(); return; }
+    if (!state.mention || state.mention.ta !== ta) {
+        closeMention();
+        const el = document.createElement('div');
+        el.className = 'mention-pop'; el.setAttribute('role', 'listbox');
+        ta.closest('.editor').appendChild(el);
+        state.mention = { ta, el, items, sel: 0, start: 0 };
+    }
+    Object.assign(state.mention, { items, sel: 0, start: before.length - mt[1].length - 1 });
+    paintMention();
+}
+function pickMention(i) {
+    const m = state.mention;
+    if (!m || !m.items[i]) return;
+    const u = m.items[i], ta = m.ta;
+    const tag = `@[${String(u.name || 'משתמש').replace(/[\[\]()]/g, '')}](${u.uid}) `;
+    ta.setRangeText(tag, m.start, ta.selectionStart, 'end');
+    closeMention();
+    ta.focus();
+    ta.dispatchEvent(new Event('input', { bubbles: true }));
+}
+
+/* ---------- אירועים ---------- */
+document.addEventListener('mousedown', e => { if (e.target.closest('.mention-pop')) e.preventDefault(); });
+document.addEventListener('click', e => {
+    if (!e.target.closest('.bell-wrap')) closeNotif();
+    const b = e.target.closest('[data-act]');
+    if (!b) return;
+    switch (b.dataset.act) {
+        case 'bell-toggle': { const p = $('#notif-panel'), open = p.classList.toggle('open'); b.setAttribute('aria-expanded', String(open)); closeMenu(); if (open) loadNotifs(); break; }
+        case 'notif-open': openNotif(b.dataset.id); break;
+        case 'notif-readall': readAllNotifs(); break;
+        case 'follow-topic': toggleFollowTopic(b.dataset.id); break;
+        case 'follow-user': toggleFollowUser(b.dataset.uid); break;
+        case 'mention-pick': pickMention(num(b.dataset.i)); break;
+        case 'reg-submit': {
+            const addr = (($('#login-address') || {}).value || '').trim();
+            if (!addr) { toast('יש להזין כתובת מגורים', 'error'); $('#login-address').focus(); break; }
+            if (!($('#login-confirm') || {}).checked) { toast('יש לאשר את ההצהרה', 'error'); break; }
+            b.disabled = true;
+            registerUser(addr).then(ok => { b.disabled = false; if (ok) go(consumeReturn()); });
+            break;
+        }
+    }
+});
+document.addEventListener('input', e => {
+    if (e.target.id === 'login-address') updateLoginButton();
+    if (e.target.matches && e.target.matches('textarea[data-editor-field]')) updateMention(e.target);
+});
+document.addEventListener('change', e => { if (e.target.id === 'login-confirm') updateLoginButton(); });
+document.addEventListener('focusout', e => { if (state.mention && e.target === state.mention.ta) closeMention(); });
+document.addEventListener('keydown', e => {
+    const m = state.mention;
+    if (m) {
+        if (e.key === 'ArrowDown') { e.preventDefault(); m.sel = (m.sel + 1) % m.items.length; paintMention(); return; }
+        if (e.key === 'ArrowUp') { e.preventDefault(); m.sel = (m.sel - 1 + m.items.length) % m.items.length; paintMention(); return; }
+        if (e.key === 'Enter' || e.key === 'Tab') { e.preventDefault(); e.stopPropagation(); pickMention(m.sel); return; }
+        if (e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); closeMention(); return; }
+    }
+    if (e.key === 'Escape') closeNotif();
+}, true);
 
 /* ============ אתחול ============ */
 state.user = safeJSON(localStorage.getItem(CFG.USER_KEY), null);
@@ -982,6 +2215,7 @@ document.addEventListener('visibilitychange', () => {
 render();
 loadData();
 initGoogle();
+if (state.user) checkRegistration();
 </script>
 </body>
 </html>
